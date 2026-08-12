@@ -1,4 +1,4 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:4300
-SETUVAR fish_user_paths:/Users/looank/\x2enix\x2dprofile/bin\x1e/run/current\x2dsystem/sw/bin\x1e/nix/var/nix/profiles/default/bin\x1e/Users/looank/\x2elocal/bin\x1e/run/wrappers/bin\x1e/home/looank/\x2enix\x2dprofile/bin\x1e/opt/homebrew/bin
+SETUVAR fish_user_paths:/run/wrappers/bin\x1e/home/looank/\x2enix\x2dprofile/bin\x1e/run/current\x2dsystem/sw/bin\x1e/home/looank/\x2elocal/bin\x1e/Users/looank/\x2enix\x2dprofile/bin\x1e/nix/var/nix/profiles/default/bin\x1e/Users/looank/\x2elocal/bin\x1e/opt/homebrew/bin

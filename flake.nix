@@ -30,21 +30,31 @@
         config.allowUnfree = true;
         overlays = [
           nur.overlays.default
-          (final: prev: {
-            claude-code = prev.claude-code.overrideAttrs (old: rec {
-              version = "2.1.92";
-              src = prev.fetchzip {
-                url = "https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-${version}.tgz";
-                hash = "sha256-CLLCtVK3TeXFZ8wBnRRHNc2MoUt7lTdMJwz8sZHpkFM=";
+          (final: prev:
+            let
+              version = "2.1.214";
+              platformAttrs = {
+                "x86_64-linux" = {
+                  key = "linux-x64";
+                  hash = "sha256-PAKRNvfIH1TtSjjp1S5lWq1TZDPbveUFGcjDG7ZGrRQ=";
+                };
+                "aarch64-darwin" = {
+                  key = "darwin-arm64";
+                  hash = "sha256-WXlt0Y6dd/ElbzZ9ttKM5L2c1ZaOQCrToyeqw2q8bew=";
+                };
               };
-              npmDeps = prev.fetchNpmDeps {
-                name = "claude-code-${version}-npm-deps";
-                inherit src;
-                postPatch = old.postPatch;
-                hash = "sha256-izy3dQProZIdUF5Z11fvGQOm/TBcWGhDK8GvNs8gG5E=";
-              };
-            });
-          })
+              system = prev.stdenv.hostPlatform.system;
+              attrs = platformAttrs.${system} or null;
+            in
+            prev.lib.optionalAttrs (attrs != null) {
+              claude-code = prev.claude-code-bin.overrideAttrs (old: {
+                inherit version;
+                src = prev.fetchurl {
+                  url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/${version}/${attrs.key}/claude";
+                  inherit (attrs) hash;
+                };
+              });
+            })
         ];
       });
 

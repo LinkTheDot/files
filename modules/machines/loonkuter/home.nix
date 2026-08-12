@@ -18,6 +18,7 @@
   home.packages = with pkgs; [
     claude-code
     file
+    tokei
     # mycli declares sqlglot==27.* but nixpkgs-unstable has 28.x; relax the constraint since it works fine
     (mycli.overridePythonAttrs (old: {
       nativeBuildInputs = (old.nativeBuildInputs or []) ++ [ python3Packages.pythonRelaxDepsHook ];

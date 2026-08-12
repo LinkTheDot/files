@@ -20101,3 +20101,363 @@
 
 # 2026-04-12 22:49:26.119596
 +exit
+
+# 2026-04-16 17:21:52.740244
++select * from stream_message where channel_id = 1 and contents like '%letter opener%'
+
+# 2026-04-16 17:25:41.934699
++select * from stream_message join twitch_user on twitch_user.id = stream_message.twitch_user_id where stream_message.id in (1849516, 7111415, 7111428)\G
+
+# 2026-04-16 22:46:44.466098
++exit
+
+# 2026-04-17 14:40:56.481225
++select * from stream where twitch_user_id = 1
+
+# 2026-04-17 14:41:16.106563
++select sum(amount) from donation_event where stream_id = 778 group by event_type
+
+# 2026-04-17 14:41:24.230637
++select event_type,sum(amount) from donation_event where stream_id = 778 group by event_type
+
+# 2026-04-17 15:28:48.162868
++exit
+
+# 2026-04-18 13:01:41.199673
++select * from stream where title like '%hi i\'m shondo%' or '%hi im shondo%'
+
+# 2026-04-18 13:01:53.095055
++select * from stream where title like '%hi i\'m shondo%' or '%hi%i%m%shondo%'
+
+# 2026-04-18 13:01:59.896230
++select * from stream where title like '%hi%i%m%shondo%'
+
+# 2026-04-18 13:34:14.267029
++\f GetUser brandon222777
+
+# 2026-04-18 13:34:25.937150
++select * from stream_message where twitch_user_id = 34375
+
+# 2026-04-18 13:34:39.473935
++select * from stream_message where twitch_user_id = 34375 and contents = 'i like anime girls'
+
+# 2026-04-18 13:34:47.511455
++select * from stream_message where twitch_user_id = 34375 and contents like '%anime%'
+
+# 2026-04-18 19:09:38.169844
++exit
+
+# 2026-04-22 20:21:02.137489
++select * from stream where twitch_user_id = 1
+
+# 2026-04-22 20:22:15.781312
++select * from stream_message where timestamp >= "2026-01-01 00:00:00" and channel_id = 1 and contents like '%taste%'
+
+# 2026-04-22 20:25:25.611778
++select * from stream_message join twitch_user on twitch_user.id = stream_message.twitch_user_id where stream_message.id = 8597060
+
+# 2026-04-22 20:25:27.550429
++select * from stream_message join twitch_user on twitch_user.id = stream_message.twitch_user_id where stream_message.id = 8597060\G
+
+# 2026-04-22 22:29:17.704335
++exit
+
+# 2026-04-24 12:53:01.922492
++select * from stream_message where contents like '%Anniversary%' limit 1
+
+# 2026-04-24 12:53:05.788183
++select * from stream_message where contents like '%Anniversary%' limit 100
+
+# 2026-04-24 21:24:43.447082
++exity
+
+# 2026-04-24 21:24:44.375009
++exit
+
+# 2026-04-27 00:37:13.710553
++select * from seaql_migrations
+
+# 2026-04-27 00:37:16.743560
++exit
+
+# 2026-05-05 22:33:29.480005
++select * from stream where twitch_user_id = `GetUserIdFromLogin`('ninaninin')
+
+# 2026-05-05 22:33:46.620602
++select * from stream where twitch_stream_id = 317190923237
+
+# 2026-05-05 22:34:03.398706
++select * from stream
+
+# 2026-05-05 22:35:09.862411
++exit
+
+# 2026-05-23 04:27:33.870081
++select * from stream_message where channel_id = GetUserIdFromLogin('tenshimishie') and twitch_user_id = `GetUserIdFromLogin`('cordiesd1e')
+
+# 2026-05-23 04:27:39.572811
++\f GetUser Cordies
+
+# 2026-05-23 04:27:50.466651
++select * from stream_message where channel_id = GetUserIdFromLogin('tenshimishie') and twitch_user_id = `GetUserIdFromLogin`('3stann')
+
+# 2026-05-23 04:27:52.496892
++select * from stream_message where channel_id = GetUserIdFromLogin('tenshimishie') and twitch_user_id = `GetUserIdFromLogin`('3stan_')
+
+# 2026-05-23 04:28:15.380017
++select * from stream_message where channel_id = GetUserIdFromLogin('tenshimishie') and twitch_user_id = `GetUserIdFromLogin`('pessimistic ')
+
+# 2026-05-23 04:28:21.162302
++select * from stream_message where channel_id = GetUserIdFromLogin('tenshimishie') and twitch_user_id = `GetUserIdFromLogin`('gelbooru')
+
+# 2026-05-23 04:28:44.215015
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('cordiesd1e') order by timestamp desc limit 100
+
+# 2026-05-23 04:32:39.843879
++exit
+
+# 2026-05-29 12:13:23.855525
++\f LatestMessages 10
+
+# 2026-05-29 12:16:45.854187
++exit
+
+# 2026-06-03 00:57:59.934168
++\f GetUser Remnant
+
+# 2026-06-03 00:58:17.181800
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('RemnantAdvent')
+
+# 2026-06-03 00:58:44.763000
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('remnantadvent')
+
+# 2026-06-03 01:01:17.323420
++tee remnant.txt
+
+# 2026-06-03 01:01:18.452066
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('remnantadvent')
+
+# 2026-06-03 01:01:20.693254
++notee
+
+# 2026-06-03 01:01:21.582550
++exit
+
+# 2026-06-06 11:50:18.203392
++\f GetUser CordiesD1e
+
+# 2026-06-06 11:50:35.669553
++select * from donation_event where donator_twitch_user_id = 83
+
+# 2026-06-06 11:50:58.381320
++select event_type,count(amount) from donation_event where donator_twitch_user_id = 83 group by event_type
+
+# 2026-06-06 11:51:13.433351
++select event_type,sum(amount) from donation_event where donator_twitch_user_id = 83 group by 
+
+# 2026-06-06 11:51:18.816699
++select event_type,sum(amount) from donation_event where donator_twitch_user_id = 83 group by event_type 
+
+# 2026-06-06 11:53:01.714897
++select event_type,sum(amount) from donation_event where donator_twitch_user_id = 1 group by event_type 
+
+# 2026-06-06 11:53:06.998451
++select event_type,sum(amount) from donation_event where donator_twitch_user_id = 3 group by event_type 
+
+# 2026-06-06 11:53:52.714563
++gst
+
+# 2026-07-18 16:39:57.372493
++\f GetUser azibelpher
+
+# 2026-07-18 16:40:00.957203
++\f GetUser azibel
+
+# 2026-07-18 16:40:03.055269
++\f GetUser azi
+
+# 2026-07-18 16:40:08.454041
++\f GetUser bigbill
+
+# 2026-07-18 16:40:17.352111
++\f GetUser foreigner
+
+# 2026-07-18 16:40:20.088028
++exit
+
+# 2026-07-22 20:19:19.334487
++select * from user_timeout 
+
+# 2026-07-22 20:19:25.854641
++\f GetUser Riri
+
+# 2026-07-22 20:19:36.809638
++select * from user_timeout where twitch_user_id = 19346
+
+# 2026-07-22 20:20:32.384389
++\f GetData
+
+# 2026-07-23 01:19:57.431207
++exit
+
+# 2026-07-26 13:59:31.120151
++select * from stream 
+
+# 2026-07-26 13:59:37.772696
++select * from stream where twitch_user_id = 1
+
+# 2026-07-26 14:44:31.330502
++exit
+
+# 2026-07-28 01:24:10.222863
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('izuwumi')
+
+# 2026-07-28 01:24:22.309579
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('izoowoo')
+
+# 2026-07-28 01:24:32.165451
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('izoowoo')\g
+
+# 2026-07-28 01:24:46.017205
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('izoowoo')
+
+# 2026-07-28 01:25:24.645500
++select channel_id,timestamp,contents from stream_message where twitch_user_id = `GetUserIdFromLogin`('izoowoo')
+
+# 2026-07-28 01:25:30.634612
++select channel_id,timestamp,contents from stream_message where twitch_user_id = `GetUserIdFromLogin`('izoowoo')\G
+
+# 2026-07-28 01:26:07.707833
++select twitch_user.channel_name as channel,timestamp,contents join twitch_user as channel on twitch_user.id = stream_message.channel_id from stream_message where twitch_user_id = `GetUserIdFromLogin`('izoowoo')\G
+
+# 2026-07-28 01:26:20.943815
++select twitch_user.channel_name as channel,timestamp,contents from stream_message join twitch_user as channel on twitch_user.id = stream_message.channel_id where twitch_user_id = `GetUserIdFromLogin`('izoowoo')\G
+
+# 2026-07-28 01:26:30.753678
++select twitch_user.login_name as channel,timestamp,contents from stream_message join twitch_user as channel on twitch_user.id = stream_message.channel_id where twitch_user_id = `GetUserIdFromLogin`('izoowoo')\G
+
+# 2026-07-28 02:44:10.824141
++exit
+
+# 2026-08-01 01:06:48.081076
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('dawn') and contents like "@linkthedot"
+
+# 2026-08-01 01:06:52.934715
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('dawn') and contents like "%linkthedot%"
+
+# 2026-08-01 01:06:57.823030
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('dawnstryder') and contents like "%linkthedot%"
+
+# 2026-08-01 01:07:51.027673
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('govknar') and contents like "does it bring out the flavour more^%"
+
+# 2026-08-01 01:07:54.369983
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('govknar') and contents like "does it bring out the flavour more%"
+
+# 2026-08-01 03:48:52.123345
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('streamelements') and contents like "bribe"
+
+# 2026-08-01 03:49:07.936601
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('streamelements') and contents like "%bribe%"
+
+# 2026-08-01 04:52:01.891613
++exit
+
+# 2026-08-01 14:01:20.141742
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('alexoxo_01')
+
+# 2026-08-01 17:15:10.007051
++exit
+
+# 2026-08-05 18:14:42.882472
++select * from emote where id = 26235
+
+# 2026-08-05 18:16:08.931477
++exit
+
+# 2026-08-05 18:36:56.008623
++show columns from stream
+
+# 2026-08-05 18:37:06.631221
++exit
+
+# 2026-08-05 18:54:20.771651
++select * from stream where twitch_user_id = 1
+
+# 2026-08-05 18:54:52.978026
++select count(*) from stream where id = 241
+
+# 2026-08-05 18:55:10.123037
++select count(*) from stream_message where stream_id = 241
+
+# 2026-08-05 18:55:28.153157
++select count(*) from stream_message where stream_id = 242
+
+# 2026-08-05 18:55:49.461113
++select * from stream where twitch_user_id = 1
+
+# 2026-08-05 18:56:05.745196
++select id from stream where twitch_user_id = 1 where title is like 'shondothon day %'
+
+# 2026-08-05 18:56:20.046210
++select id from stream where twitch_user_id = 1 and title is like 'shondothon day %'
+
+# 2026-08-05 18:56:22.916222
++select id from stream where twitch_user_id = 1 and title like 'shondothon day %'
+
+# 2026-08-05 18:58:49.791314
++select ROW_NUMBER(),id from stream where twitch_user_id = 1 and title like 'shondothon day %'
+
+# 2026-08-05 18:59:11.524346
++SELECT ROW_NUMBER() OVER (), id
++FROM stream
++WHERE twitch_user_id = 1 AND title LIKE 'shondothon day %';
+
+# 2026-08-05 18:59:19.220608
++SELECT ROW_NUMBER() OVER () as day, id
++FROM stream
++WHERE twitch_user_id = 1 AND title LIKE 'shondothon day %';
+
+# 2026-08-05 19:01:35.610075
++SELECT
++  ROW_NUMBER() OVER (ORDER BY s.id) AS day,
++  s.id AS stream_id,
++  COUNT(sm.id) AS messages
++FROM stream s
++JOIN stream_message sm ON sm.stream_id = s.id
++WHERE s.twitch_user_id = 1 AND s.title LIKE 'shondothon day %'
++GROUP BY s.id
++ORDER BY s.id;
+
+# 2026-08-05 19:02:14.328708
++exit
+
+# 2026-08-10 15:16:05.397132
++\f GetUser Dewd
+
+# 2026-08-10 16:02:57.349911
++\f GetData
+
+# 2026-08-10 17:34:38.708029
++select * from stream where twitch_user_id = 1 and start_timestamp >= "2025-09-13" limit 1
+
+# 2026-08-10 17:34:43.609021
++select * from stream where twitch_user_id = 1 and start_timestamp >= "2025-09-12" limit 1
+
+# 2026-08-10 17:35:21.396173
++select * from stream where id = 186
+
+# 2026-08-10 18:54:32.496599
++\f GetData
+
+# 2026-08-10 18:55:13.415518
++SELECT (SELECT COUNT(*) FROM stream_message where channel_id = 1) as messages, (SELECT COUNT(*) FROM twitch_user) as users
+
+# 2026-08-10 18:58:11.395443
++\f LatestMessages 10
+
+# 2026-08-10 18:58:30.407384
++select * from stream_message where twitch_user_id = 3 and channel_id = 2 order by timestamp desc limit 5 
+
+# 2026-08-10 20:44:12.875091
++exit
