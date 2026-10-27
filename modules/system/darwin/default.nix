@@ -6,6 +6,8 @@ in
 {
   imports = [
     ./dnsmasq.nix
+    ./nix-apps.nix
+    ./default-browser.nix
   ];
 
   # Disable nix-darwin's management of Nix since we're using Determinate Nix

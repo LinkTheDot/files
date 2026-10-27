@@ -38,9 +38,9 @@ set -g @dracula-battery-label "󰁹"
 
 set -g @dracula-show-location false
 
-set -g @dracula-military-time false
+set -g @dracula-military-time true
 set -g @dracula-day-month true
 set -g @dracula-show-timezone true
-set -g @dracula-time-format "%a %b %e %I:%M %p"
+set -g @dracula-time-format "%a %d-%m-%Y %H:%M"
 
 set -g @dracula-plugins "battery network time"
