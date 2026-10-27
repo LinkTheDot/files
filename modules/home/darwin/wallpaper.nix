@@ -8,7 +8,7 @@
     config = {
       ProgramArguments = [
         "${pkgs.desktoppr}/bin/desktoppr"
-        "${userConfig.homeDirectory}/.config/assets/background.png"
+        "${userConfig.homeDirectory}/.config/assets/background1.png"
       ];
       RunAtLoad = true;
     };

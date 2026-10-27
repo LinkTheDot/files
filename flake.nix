@@ -25,36 +25,41 @@
 
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
 
+      # Swap nixpkgs' npm-built `claude-code` for the upstream prebuilt binary.
+      # The npm-based derivation regularly breaks because Anthropic removes
+      # old versions from the npm registry before nixpkgs' pin catches up.
+      claudeCodeBinOverlay = (final: prev:
+        let
+          version = "2.1.214";
+          platformAttrs = {
+            "x86_64-linux" = {
+              key = "linux-x64";
+              hash = "sha256-PAKRNvfIH1TtSjjp1S5lWq1TZDPbveUFGcjDG7ZGrRQ=";
+            };
+            "aarch64-darwin" = {
+              key = "darwin-arm64";
+              hash = "sha256-WXlt0Y6dd/ElbzZ9ttKM5L2c1ZaOQCrToyeqw2q8bew=";
+            };
+          };
+          system = prev.stdenv.hostPlatform.system;
+          attrs = platformAttrs.${system} or null;
+        in
+        prev.lib.optionalAttrs (attrs != null) {
+          claude-code = prev.claude-code-bin.overrideAttrs (old: {
+            inherit version;
+            src = prev.fetchurl {
+              url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/${version}/${attrs.key}/claude";
+              inherit (attrs) hash;
+            };
+          });
+        });
+
       nixpkgsFor = forAllSystems (system: import nixpkgs {
         inherit system;
         config.allowUnfree = true;
         overlays = [
           nur.overlays.default
-          (final: prev:
-            let
-              version = "2.1.214";
-              platformAttrs = {
-                "x86_64-linux" = {
-                  key = "linux-x64";
-                  hash = "sha256-PAKRNvfIH1TtSjjp1S5lWq1TZDPbveUFGcjDG7ZGrRQ=";
-                };
-                "aarch64-darwin" = {
-                  key = "darwin-arm64";
-                  hash = "sha256-WXlt0Y6dd/ElbzZ9ttKM5L2c1ZaOQCrToyeqw2q8bew=";
-                };
-              };
-              system = prev.stdenv.hostPlatform.system;
-              attrs = platformAttrs.${system} or null;
-            in
-            prev.lib.optionalAttrs (attrs != null) {
-              claude-code = prev.claude-code-bin.overrideAttrs (old: {
-                inherit version;
-                src = prev.fetchurl {
-                  url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/${version}/${attrs.key}/claude";
-                  inherit (attrs) hash;
-                };
-              });
-            })
+          claudeCodeBinOverlay
         ];
       });
 
@@ -135,6 +140,10 @@
             nixos-wsl.nixosModules.default
             # ./modules/system/nixos/default.nix <- Clean this and switch to this default
             ./modules/machines/loonkuter/system.nix
+            {
+              nixpkgs.config.allowUnfree = true;
+              nixpkgs.overlays = [ nur.overlays.default claudeCodeBinOverlay ];
+            }
           ];
           specialArgs = {
             inherit inputs;

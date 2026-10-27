@@ -5,7 +5,7 @@ alias gco "git checkout"
 alias gd "git diff"
 alias gp "git push"
 alias gst "git status"
-alias girb 'gir rebase -i'
+alias girb 'git rebase -i'
 alias gup "git pull --rebase"
 alias gupp 'git fetch -p && gup'
 alias gfullre 'git restore --staged --worktree'

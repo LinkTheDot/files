@@ -11,7 +11,7 @@ java = "24"
 jj = "latest"
 lua = "5.1"
 node = "22"
-ocaml = "5.2"
+"asdf:asdf-community/asdf-ocaml" = "5.2"
 python = "3.13"
 ruby = "4.0.0"
 rust = { version = "stable", profile = "default" }  # includes rustc, cargo, rust-std, rust-docs, rustfmt, clippy

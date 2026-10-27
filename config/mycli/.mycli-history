@@ -20461,3 +20461,3500 @@
 
 # 2026-08-10 20:44:12.875091
 +exit
+
+# 2026-08-13 02:09:18.098374
++select * from donation_event where donator_twitch_user_id = 3
+
+# 2026-08-13 02:09:34.079435
++select * from donation_event where donator_twitch_user_id = 3 and event_type = "streamlabs_donation"
+
+# 2026-08-13 02:57:08.231429
++exit
+
+# 2026-08-14 14:28:28.672311
++select * from donation_event where donator_twitch_user_id = 3 and event_type = "streamlabs_donation"
+
+# 2026-08-15 00:30:11.654715
++select * from stream
+
+# 2026-08-15 00:30:50.814449
++select * from stream_message where stream_id = 1076 and contents like "%potential%"
+
+# 2026-08-15 03:51:35.882723
++select * from donation_event where donator_twitch_user_id = 3 and event_type = "streamlabs_donation"
+
+# 2026-08-15 03:51:48.423002
++exit
+
+# 2026-08-16 04:02:06.139621
++select * from stream
+
+# 2026-08-16 04:02:19.228538
++select * from stream_message where stream_id = 1076 and contents like "%lithium%
+
+# 2026-08-16 04:02:40.910882
++select * from stream_message where stream_id = 1076 and contents like "%lithium%"
+
+# 2026-08-16 04:10:05.959124
++select * from stream_message where stream_id = 1076 and twitch_user_id = 3
+
+# 2026-08-16 04:10:17.105418
++select * from emote where name = 'INSANECAT'
+
+# 2026-08-16 04:11:06.714552
++select * from emote_usage join stream_message on stream_message.id = emote_usage.stream_message_id where emote_id = 12091 limit 1 
+
+# 2026-08-16 04:11:14.078491
++select * from emote_usage join stream_message on stream_message.id = emote_usage.stream_message_id where emote_id = 12091 where channel_id = 1 limit 1 
+
+# 2026-08-16 04:11:19.513579
++select * from emote_usage join stream_message on stream_message.id = emote_usage.stream_message_id where emote_id = 12091 and channel_id = 1 limit 1 
+
+# 2026-08-16 04:11:25.492380
++select * from emote_usage join stream_message on stream_message.id = emote_usage.stream_message_id where emote_id = 29258 and channel_id = 1 limit 1 
+
+# 2026-08-16 04:11:48.237454
++select * from stream_message join emote_usage on emote_id = 120981 where stream_id = 1076 and twitch_user_id = 3
+
+# 2026-08-16 04:11:52.170502
++select * from stream_message join emote_usage on emote_id = 12091 where stream_id = 1076 and twitch_user_id = 3
+
+# 2026-08-16 04:12:34.149675
++select * from stream_message join emote_usage on emote_usage.stream_message_id = stream_message.id where stream_id = 1076 and twitch_user_id = 3 emote_usage.emote_id = 12091
+
+# 2026-08-16 04:12:38.821560
++select * from stream_message join emote_usage on emote_usage.stream_message_id = stream_message.id where stream_id = 1076 and twitch_user_id = 3 and emote_usage.emote_id = 12091
+
+# 2026-08-16 04:13:36.611848
++select * from stream_message where stream_id = 1076 and twitch_user_id = 3 and contents like '% Yayyyy'
+
+# 2026-08-16 04:14:28.402665
++select * from stream_message where stream_id = 1076 and contents like '%m losing my tempoligion syadouSing%'
+
+# 2026-08-16 04:16:02.406713
++exi
+
+# 2026-08-16 04:16:03.237493
++exit
+
+# 2026-08-16 19:25:14.054186
++select * from stream_message where twitch_user_id = 3 and channel_id = 1 and contents like "%military%"
+
+# 2026-08-16 19:25:52.441317
++select * from stream where id = 1056
+
+# 2026-08-16 19:36:10.673358
++select * from donation_event where donator_twitch_user_id = `GetUserIdFromLogin`('anonymous')
+
+# 2026-08-16 19:39:21.121507
++select * from donation_event where event_type = 'streamlabs_donation' order by amount desc
+
+# 2026-08-16 23:00:20.306882
++exit
+
+# 2026-08-17 20:10:15.065326
++create database groceries
+
+# 2026-08-17 20:10:17.209783
++use groceries
+
+# 2026-08-17 20:11:12.614168
++exit
+
+# 2026-08-17 20:27:02.967703
++\f GetUser dylan
+
+# 2026-08-17 20:29:18.746589
++select
++    stream.id,
++    stream.start_timestamp as timestamp,
++    stream.name,
++    COUNT(sm.id) as message_count
++from stream
++join stream_message as sm on sm.stream_id = stream.id
++where sm.twitch_user_id = 70
++group by stream.id, stream.start_timestamp, stream.name
+
+# 2026-08-17 20:29:23.152649
++select
++    stream.id,
++    stream.start_timestamp as timestamp,
++    stream.name,
++    COUNT(sm.id) as message_count
++from stream
++join stream_message as sm on sm.stream_id = stream.id
++where sm.twitch_user_id = 70
++group by stream.id, stream.start_timestamp, stream.title
+
+# 2026-08-17 20:29:29.406876
++select
++    stream.id,
++    stream.start_timestamp as timestamp,
++    stream.title,
++    COUNT(sm.id) as message_count
++from stream
++join stream_message as sm on sm.stream_id = stream.id
++where sm.twitch_user_id = 70
++group by stream.id, stream.start_timestamp, stream.title
+
+# 2026-08-17 20:29:44.069554
++tee dylan.txt
+
+# 2026-08-17 20:29:45.346704
++select
++    stream.id,
++    stream.start_timestamp as timestamp,
++    stream.title,
++    COUNT(sm.id) as message_count
++from stream
++join stream_message as sm on sm.stream_id = stream.id
++where sm.twitch_user_id = 70
++group by stream.id, stream.start_timestamp, stream.title
+
+# 2026-08-17 20:29:48.257415
++notee
+
+# 2026-08-17 20:54:41.984262
++exit
+
+# 2026-08-19 18:06:55.149891
++\f GetUser Frill
+
+# 2026-08-19 18:07:03.079693
++\f GetUser sunny
+
+# 2026-08-19 18:07:07.286202
++\f GetUser Kumo
+
+# 2026-08-19 18:11:40.748033
++SELECT (SELECT COUNT(*) FROM stream_message WHERE twitch_user_id = `GetUserIdFromLogin`(sunnyfr1ll) AND channel_id in (1, 2) 
+
+# 2026-08-19 18:11:41.572951
++\e
+
+# 2026-08-19 18:14:51.227921
++SELECT
++  tu.login_name AS name,
++  COUNT(sm.id) AS messages_sent
++FROM stream_message as sm
++JOIN twitch_user as tu 
++  ON tu.twitch_user_id = sm.twitch_user_id
++  AND sm.twitch_user_id IN (GetUserIdFromLogin('sunnyfr1ll'), GetUserIdFromLogin('kumogorogoro'))
++GROUP BY tu.login_name
++ORDER BY messages_sent
+
+# 2026-08-19 18:15:01.038465
++SELECT
++  tu.login_name AS name,
++  COUNT(sm.id) AS messages_sent
++FROM stream_message as sm
++JOIN twitch_user as tu 
++  ON tu.id = sm.twitch_user_id
++  AND sm.twitch_user_id IN (GetUserIdFromLogin('sunnyfr1ll'), GetUserIdFromLogin('kumogorogoro'))
++GROUP BY tu.login_name
++ORDER BY messages_sent
+
+# 2026-08-20 04:24:32.475867
++exit
+
+# 2026-08-21 01:54:14.247527
++show databases
+
+# 2026-08-21 01:54:21.213942
++exit
+
+# 2026-08-21 01:54:24.361185
++show databases
+
+# 2026-08-21 01:54:28.122821
++exit
+
+# 2026-08-21 14:34:24.584056
++\f GetUser tenshie
+
+# 2026-08-21 14:34:25.758958
++\f GetUser tenshi
+
+# 2026-08-21 14:35:26.461941
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('weeabo_paul') and channel_id = `GetUserIdFromLogin`('tenshimishie')
+
+# 2026-08-21 14:36:16.068097
++select stream.id, count(stream_message.id) from stream_message join stream on stream.id = stream_message.stream_id where twitch_user_id = `GetUserIdFromLogin`('weeabo_paul') and channel_id = `GetUserIdFromLogin`('tenshimishie') 
+
+# 2026-08-21 14:36:24.575034
++select stream.id, count(stream_message.id) from stream_message join stream on stream.id = stream_message.stream_id where stream_message.twitch_user_id = `GetUserIdFromLogin`('weeabo_paul') and channel_id = `GetUserIdFromLogin`('tenshimishie') 
+
+# 2026-08-21 14:36:30.586050
++select stream.id, count(stream_message.id) from stream_message join stream on stream.id = stream_message.stream_id where stream_message.twitch_user_id = `GetUserIdFromLogin`('weeabo_paul') and channel_id = `GetUserIdFromLogin`('tenshimishie') group by stream.id 
+
+# 2026-08-21 14:36:32.449188
++\f
+
+# 2026-08-21 14:36:35.143002
++.e
+
+# 2026-08-21 14:36:36.086262
++\e
+
+# 2026-08-21 14:36:40.591082
++select stream.id, count(stream_message.id) from stream_message join stream on stream.id = stream_message.stream_id where stream_message.twitch_user_id = `GetUserIdFromLogin`('weeabo_paul') and channel_id = `GetUserIdFromLogin`('tenshimishie') group by stream.id 
+
+# 2026-08-21 14:36:42.571987
++\e
+
+# 2026-08-21 14:37:11.111122
++select 
++  stream.id, 
++  count(stream_message.id) 
++from stream_message 
++join stream 
++  on stream.id = stream_message.stream_id 
++where stream_message.twitch_user_id 
++  = `GetUserIdFromLogin`('weeabo_paul') 
++and channel_id 
++  = `GetUserIdFromLogin`('tenshimishie') 
++group by stream.id
+
+# 2026-08-21 14:37:17.555839
++\e
+
+# 2026-08-21 14:38:03.016409
++select 
++  stream.id, 
++  DATE_FORMAT("%Y-%m-%d", stream.start_timestamp), stream_date
++  count(stream_message.id) messages_sent
++from stream_message 
++join stream 
++  on stream.id = stream_message.stream_id 
++where stream_message.twitch_user_id 
++  = `GetUserIdFromLogin`('weeabo_paul') 
++and channel_id 
++  = `GetUserIdFromLogin`('tenshimishie') 
++group by stream.id
+
+# 2026-08-21 14:38:07.856189
++\e
+
+# 2026-08-21 14:38:14.096515
++select 
++  stream.id, 
++  DATE_FORMAT("%Y-%m-%d", stream.start_timestamp) as stream_date,
++  count(stream_message.id) messages_sent
++from stream_message 
++join stream 
++  on stream.id = stream_message.stream_id 
++where stream_message.twitch_user_id 
++  = `GetUserIdFromLogin`('weeabo_paul') 
++and channel_id 
++  = `GetUserIdFromLogin`('tenshimishie') 
++group by stream.id
+
+# 2026-08-21 14:38:25.914226
++select 
++  stream.id, 
++  stream.start_timestamp) as stream_date,
++  count(stream_message.id) messages_sent
++from stream_message 
++join stream 
++  on stream.id = stream_message.stream_id 
++where stream_message.twitch_user_id 
++  = `GetUserIdFromLogin`('weeabo_paul') 
++and channel_id 
++  = `GetUserIdFromLogin`('tenshimishie') 
++group by stream.id
+
+# 2026-08-21 14:38:30.353344
++select 
++  stream.id, 
++  stream.start_timestamp as stream_date,
++  count(stream_message.id) messages_sent
++from stream_message 
++join stream 
++  on stream.id = stream_message.stream_id 
++where stream_message.twitch_user_id 
++  = `GetUserIdFromLogin`('weeabo_paul') 
++and channel_id 
++  = `GetUserIdFromLogin`('tenshimishie') 
++group by stream.id
+
+# 2026-08-21 14:38:37.752572
++select 
++  stream.id, 
++  DATE_FORMAT("%Y-%m-%d", stream.start_timestamp) as stream_date,
++  count(stream_message.id) messages_sent
++from stream_message 
++join stream 
++  on stream.id = stream_message.stream_id 
++where stream_message.twitch_user_id 
++  = `GetUserIdFromLogin`('weeabo_paul') 
++and channel_id 
++  = `GetUserIdFromLogin`('tenshimishie') 
++group by stream.id
+
+# 2026-08-21 14:38:38.658114
++\e
+
+# 2026-08-21 14:38:49.161146
++select 
++  stream.id, 
++  DATE_FORMAT(stream.start_timestamp, "%Y-%m-%d") as stream_date,
++  count(stream_message.id) messages_sent
++from stream_message 
++join stream 
++  on stream.id = stream_message.stream_id 
++where stream_message.twitch_user_id 
++  = `GetUserIdFromLogin`('weeabo_paul') 
++and channel_id 
++  = `GetUserIdFromLogin`('tenshimishie') 
++group by stream.id
+
+# 2026-08-21 14:52:26.534714
++exit
+
+# 2026-08-21 14:53:24.930510
++\e
+
+# 2026-08-21 15:01:06.621013
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  sm.twitch_user_id,
++  COUNT(*) AS message_count,
++  RANK() OVER (ORDER BY COUNT(*) DESC) AS rnk
++FROM stream_message sm
++JOIN target_channel tc ON sm.channel_id = tc.id
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++GROUP BY sm.twitch_user_id
++ORDER BY rnk;
+
+# 2026-08-21 15:01:41.535772
++\e
+
+# 2026-08-21 15:02:40.881817
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  chatter.login_name AS name,
++  COUNT(*) AS message_count,
++  RANK() OVER (ORDER BY COUNT(*) DESC) AS rnk
++FROM stream_message sm
++JOIN target_channel tc ON sm.channel_id = tc.id
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++GROUP BY sm.twitch_user_id
++ORDER BY rnk;
+
+# 2026-08-21 15:03:04.625214
++\e
+
+# 2026-08-21 15:04:01.271988
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  chatter.login_name AS name,
++  COUNT(*) AS message_count,
++  RANK() OVER (ORDER BY COUNT(*) DESC) AS rnk
++FROM stream_message sm
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++WHERE sm.channel_id IN (
++  (SELECT id FROM origin_channel),
++  (SELECT id FROM target_channel)
++)
++GROUP BY sm.twitch_user_id, chatter.login_name
++ORDER BY rnk;
+
+# 2026-08-21 15:05:29.689998
++\e
+
+# 2026-08-21 15:05:39.454053
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  chatter.login_name AS name,
++  COUNT(*) FILTER (WHERE sm.channel_id = (SELECT id FROM origin_channel)) AS origin_message_count,
++  COUNT(*) FILTER (WHERE sm.channel_id = (SELECT id FROM target_channel)) AS target_message_count,
++  RANK() OVER (
++    ORDER BY COUNT(*) FILTER (WHERE sm.channel_id = (SELECT id FROM target_channel)) DESC
++  ) AS rnk
++FROM stream_message sm
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++WHERE sm.channel_id IN (
++  (SELECT id FROM origin_channel),
++  (SELECT id FROM target_channel)
++)
++GROUP BY sm.twitch_user_id, chatter.login_name
++ORDER BY rnk;
+
+# 2026-08-21 15:05:58.739111
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  chatter.login_name AS name,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) AS origin_message_count,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) AS target_message_count,
++  RANK() OVER (
++    ORDER BY SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) DESC
++  ) AS rnk
++FROM stream_message sm
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++WHERE sm.channel_id IN (
++  (SELECT id FROM origin_channel),
++  (SELECT id FROM target_channel)
++)
++GROUP BY sm.twitch_user_id, chatter.login_name
++ORDER BY rnk;
+
+# 2026-08-21 15:07:44.646222
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  chatter.login_name AS name,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) AS origin_message_count,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) AS target_message_count,
++  RANK() OVER (
++    ORDER BY SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) DESC
++  ) AS rnk
++FROM stream_message sm
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++WHERE sm.channel_id IN (
++  (SELECT id FROM origin_channel),
++  (SELECT id FROM target_channel)
++)
++GROUP BY sm.twitch_user_id, chatter.login_name
++ORDER BY rnk;
+
+# 2026-08-21 15:10:12.063559
++select * from stream_message where twitch_user_id = 3 and channel_id = `GetUserIdFromLogin`('tenshiemishie')\G
+
+# 2026-08-21 15:10:31.061565
++\f GetUser tenshie
+
+# 2026-08-21 15:10:34.154556
++\f GetUser tenshi
+
+# 2026-08-21 15:10:41.759355
++select * from stream_message where twitch_user_id = 3 and channel_id = `GetUserIdFromLogin`('tenshimishie')\G
+
+# 2026-08-21 15:12:48.125593
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  chatter.login_name AS name,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) AS origin_message_count,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) AS target_message_count,
++  RANK() OVER (
++    ORDER BY SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) DESC
++  ) AS rnk
++FROM stream_message sm
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++WHERE sm.channel_id IN (
++  (SELECT id FROM origin_channel),
++  (SELECT id FROM target_channel)
++)
++GROUP BY sm.twitch_user_id, chatter.login_name
++HAVING SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) >= 100
++ORDER BY rnk;
+
+# 2026-08-21 15:12:48.929596
++\e
+
+# 2026-08-21 15:13:09.084429
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  RANK() OVER (
++    ORDER BY SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) DESC
++  ) AS "rank"
++  chatter.login_name AS name,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) AS origin_message_count,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) AS target_message_count
++FROM stream_message sm
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++WHERE sm.channel_id IN (
++  (SELECT id FROM origin_channel),
++  (SELECT id FROM target_channel)
++)
++GROUP BY sm.twitch_user_id, chatter.login_name
++HAVING SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) >= 100
++ORDER BY "rank";
+
+# 2026-08-21 15:13:09.884862
++\e
+
+# 2026-08-21 15:13:20.851683
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  RANK() OVER (
++    ORDER BY SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) DESC
++  ) AS rank
++  chatter.login_name AS name,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) AS origin_message_count,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) AS target_message_count
++FROM stream_message sm
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++WHERE sm.channel_id IN (
++  (SELECT id FROM origin_channel),
++  (SELECT id FROM target_channel)
++)
++GROUP BY sm.twitch_user_id, chatter.login_name
++HAVING SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) >= 100
++ORDER BY rank;
+
+# 2026-08-21 15:13:24.146781
++\e
+
+# 2026-08-21 15:13:43.546820
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  RANK() OVER (
++    ORDER BY SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) DESC
++  ) AS `rank`
++  chatter.login_name AS name,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) AS origin_message_count,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) AS target_message_count
++FROM stream_message sm
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++WHERE sm.channel_id IN (
++  (SELECT id FROM origin_channel),
++  (SELECT id FROM target_channel)
++)
++GROUP BY sm.twitch_user_id, chatter.login_name
++HAVING SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) >= 100
++ORDER BY `rank`;
+
+# 2026-08-21 15:13:45.661645
++:e
+
+# 2026-08-21 15:13:46.552791
++\e
+
+# 2026-08-21 15:14:12.357958
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  chatter.login_name AS name,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) AS origin_message_count,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) AS target_message_count,
++  RANK() OVER (
++    ORDER BY SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) DESC
++  ) AS `rank`
++FROM stream_message sm
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++WHERE sm.channel_id IN (
++  (SELECT id FROM origin_channel),
++  (SELECT id FROM target_channel)
++)
++GROUP BY sm.twitch_user_id, chatter.login_name
++HAVING SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) >= 100
++ORDER BY `rank`;
+
+# 2026-08-21 15:14:55.788662
++\tee mish-files.txt
+
+# 2026-08-21 15:14:58.046094
++\tee mish_files.txt
+
+# 2026-08-21 15:15:00.624734
++\tee mishfiles.txt
+
+# 2026-08-21 15:15:07.082759
++tee mish-files.txt
+
+# 2026-08-21 15:15:09.642768
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  chatter.login_name AS name,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) AS origin_message_count,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) AS target_message_count,
++  RANK() OVER (
++    ORDER BY SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) DESC
++  ) AS `rank`
++FROM stream_message sm
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++WHERE sm.channel_id IN (
++  (SELECT id FROM origin_channel),
++  (SELECT id FROM target_channel)
++)
++GROUP BY sm.twitch_user_id, chatter.login_name
++HAVING SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) >= 100
++ORDER BY `rank`;
+
+# 2026-08-21 15:15:46.156755
++notee
+
+# 2026-08-21 15:15:46.919700
++exit
+
+# 2026-08-21 15:18:09.433243
++\e
+
+# 2026-08-21 15:18:12.343121
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'tenshimishie'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  chatter.login_name AS name,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) AS origin_message_count,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) AS target_message_count,
++  RANK() OVER (
++    ORDER BY SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) DESC
++  ) AS `rank`
++FROM stream_message sm
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++WHERE sm.channel_id IN (
++  (SELECT id FROM origin_channel),
++  (SELECT id FROM target_channel)
++)
++GROUP BY sm.twitch_user_id, chatter.login_name
++HAVING SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) >= 100
++ORDER BY `rank`;
+
+# 2026-08-21 15:18:13.466988
++\e
+
+# 2026-08-21 15:18:22.786978
++WITH origin_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'fallenshadow'
++),
++target_channel AS (
++  SELECT id FROM twitch_user WHERE login_name = 'Ninaninin'
++),
++overlapping_users AS (
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN origin_channel oc ON sm.channel_id = oc.id
++  INTERSECT
++  SELECT sm.twitch_user_id
++  FROM stream_message sm
++  JOIN target_channel tc ON sm.channel_id = tc.id
++)
++SELECT
++  chatter.login_name AS name,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) AS origin_message_count,
++  SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) AS target_message_count,
++  RANK() OVER (
++    ORDER BY SUM(CASE WHEN sm.channel_id = (SELECT id FROM origin_channel) THEN 1 ELSE 0 END) DESC
++  ) AS `rank`
++FROM stream_message sm
++JOIN overlapping_users ou ON ou.twitch_user_id = sm.twitch_user_id
++JOIN twitch_user chatter ON chatter.id = sm.twitch_user_id
++WHERE sm.channel_id IN (
++  (SELECT id FROM origin_channel),
++  (SELECT id FROM target_channel)
++)
++GROUP BY sm.twitch_user_id, chatter.login_name
++HAVING SUM(CASE WHEN sm.channel_id = (SELECT id FROM target_channel) THEN 1 ELSE 0 END) >= 100
++ORDER BY `rank`;
+
+# 2026-08-21 15:22:25.916329
++\e
+
+# 2026-08-21 15:24:59.613584
++select 
++  RANK() OVER (messages_sent) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (1, 2)
++GROUP BY name ORDER BY `rank`
+
+# 2026-08-21 15:25:02.391356
++\e
+
+# 2026-08-21 15:25:19.039742
++select 
++  RANK() OVER (COUNT(sm.id)) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (1, 2)
++GROUP BY name ORDER BY `rank`
+
+# 2026-08-21 15:25:19.994412
++\e
+
+# 2026-08-21 15:26:04.360965
++SELECT 
++  RANK() OVER ( ORDER BY COUNT(sm.id) DESC ) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (1, 2)
++GROUP BY name ORDER BY `rank`
+
+# 2026-08-21 15:30:26.895701
++\e
+
+# 2026-08-21 15:30:46.159836
++SELECT 
++  RANK() OVER ( ORDER BY COUNT(sm.id) DESC ) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (1, 2)
++AND sm.timestamp > "2025-12-18"
++GROUP BY name ORDER BY `rank`
+
+# 2026-08-21 15:32:20.798109
++\e
+
+# 2026-08-21 15:34:15.563751
++WITH total_messages AS (
++  SELECT COUNT(*) FROM stream_message WHERE channel_id IN (1, 2)
++)
++
++SELECT 
++  RANK() OVER ( ORDER BY COUNT(sm.id) DESC ) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND(messages_sent / total_messages) * 100 AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (1, 2)
++AND sm.timestamp > "2025-12-18"
++GROUP BY name ORDER BY `rank`
+
+# 2026-08-21 15:34:18.094986
++\e
+
+# 2026-08-21 15:34:25.296969
++WITH total_messages AS (
++  SELECT COUNT(*) FROM stream_message WHERE channel_id IN (1, 2)
++)
++
++SELECT 
++  RANK() OVER ( ORDER BY COUNT(sm.id) DESC ) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND(COUNT(sm.id) / total_messages) * 100 AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (1, 2)
++AND sm.timestamp > "2025-12-18"
++GROUP BY name ORDER BY `rank`
+
+# 2026-08-21 15:34:26.704698
++\e
+
+# 2026-08-21 15:34:53.274934
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (1, 2) AND timestamp > '2025-12-18'
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (1, 2)
++AND sm.timestamp > '2025-12-18'
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-21 20:51:24.565926
++exit
+
+# 2026-08-24 15:29:08.734589
++\f GetUser Retro
+
+# 2026-08-24 15:29:31.527157
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (1, 2) AND timestamp > '2025-12-18'
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (1, 2)
++AND sm.timestamp > '2025-12-18'
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-24 15:29:34.179273
++\e
+
+# 2026-08-24 15:30:23.361152
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (6969) -- AND timestamp > '2025-12-18'
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (6969)
++AND tu.id = 74
++-- AND sm.timestamp > '2025-12-18'
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-24 18:20:10.609197
++exit
+
+# 2026-08-24 18:23:04.389557
++select * from stream where timestamp
+
+# 2026-08-24 18:23:11.921811
++select * from stream where end_timestamp is NULL
+
+# 2026-08-24 21:40:04.165251
++\f GetUser khubie
+
+# 2026-08-24 21:40:48.582819
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND timestamp >= '2026-08-24'
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (72240)
++AND tu.id = 74
++-- AND sm.timestamp > '2025-12-18'
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-24 21:40:49.756100
++\e
+
+# 2026-08-24 21:41:13.863168
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND timestamp >= '2026-08-24'
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (72240)
++AND sm.timestamp >= '2026-08-24' 
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-24 21:42:05.591637
++select * from stream_message where channel_id = 72240 order by timestamp limit 1
+
+# 2026-08-25 01:29:45.375713
++exit
+
+# 2026-08-25 01:29:59.287679
++exit
+
+# 2026-08-25 16:00:07.138097
++\e
+
+# 2026-08-25 16:01:17.514312
++SELECT
++  tu.login_name as name,
++  COUNT(sm.id) as amount
++FROM stream_message sm
++JOIN twitch_user tu ON
++  tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (1, 2)
++AND contents like "%effie%"
++GROUP BY name
++ORDER BY amount DESC
+
+# 2026-08-25 22:28:14.150122
++\e
+
+# 2026-08-25 22:29:28.845333
++SELECT
++  tu.login_name as name,
++  SUM(eu.usage_count) as usage
++FROM emote_usage as eu
++JOIN stream_message sm
++  ON sm.id = eu.stream_message_id
++JOIN twitch_user tu ON tu.id = sm.twitch_user_id
++GROUP BY name
++ORDER BY usage 
++DESC
+
+# 2026-08-25 22:29:42.412826
++\e
+
+# 2026-08-25 22:29:49.106322
++SELECT
++  tu.login_name as name,
++  SUM(eu.usage_count) as total
++FROM emote_usage as eu
++JOIN stream_message sm
++  ON sm.id = eu.stream_message_id
++JOIN twitch_user tu ON tu.id = sm.twitch_user_id
++GROUP BY name
++ORDER BY total 
++DESC
+
+# 2026-08-25 22:30:34.432169
++\e
+
+# 2026-08-25 22:31:03.664310
++SELECT
++  tu.login_name as name,
++  SUM(eu.usage_count) as total
++FROM emote_usage as eu
++JOIN stream_message sm
++  ON sm.id = eu.stream_message_id
++JOIN twitch_user tu 
++  ON tu.id = sm.twitch_user_id
++JOIN emote e 
++  ON e.id = eu.emote_id
++  AND emote.name = "syadou1984"
++GROUP BY name
++ORDER BY total 
++DESC
+
+# 2026-08-25 22:31:05.517113
++\e
+
+# 2026-08-25 22:31:10.686321
++SELECT
++  tu.login_name as name,
++  SUM(eu.usage_count) as total
++FROM emote_usage as eu
++JOIN stream_message sm
++  ON sm.id = eu.stream_message_id
++JOIN twitch_user tu 
++  ON tu.id = sm.twitch_user_id
++JOIN emote e 
++  ON e.id = eu.emote_id
++  AND emote.name = "syadou1984"
++GROUP BY name
++ORDER BY total 
++DESC
+
+# 2026-08-25 22:31:14.549566
++show columns from emote
+
+# 2026-08-25 22:31:30.880326
++select * from emote where name = "syadou1984"
+
+# 2026-08-25 22:32:39.290757
++SELECT
++  tu.login_name as name,
++  SUM(eu.usage_count) as total
++FROM emote_usage as eu
++JOIN stream_message sm
++  ON sm.id = eu.stream_message_id
++JOIN twitch_user tu 
++  ON tu.id = sm.twitch_user_id
++WHERE emote.id = 14919
++GROUP BY name
++ORDER BY total 
++DESC
+
+# 2026-08-25 22:32:49.342081
++SELECT
++  tu.login_name as name,
++  SUM(eu.usage_count) as total
++FROM emote_usage as eu
++JOIN stream_message sm
++  ON sm.id = eu.stream_message_id
++JOIN twitch_user tu 
++  ON tu.id = sm.twitch_user_id
++WHERE eu.emote_id = 14919
++GROUP BY name
++ORDER BY total 
++DESC
+
+# 2026-08-25 22:33:10.059377
++\e
+
+# 2026-08-25 22:33:36.207597
++SELECT
++  RANK() OVER (ORDER BY SUM(eu.usage_count) DESC) as rank,
++  tu.login_name as name,
++  SUM(eu.usage_count) as total
++FROM emote_usage as eu
++JOIN stream_message sm
++  ON sm.id = eu.stream_message_id
++JOIN twitch_user tu 
++  ON tu.id = sm.twitch_user_id
++WHERE eu.emote_id = 14919
++GROUP BY name
++ORDER BY total DESC
+
+# 2026-08-25 22:33:37.541449
++\e
+
+# 2026-08-25 22:33:41.861384
++SELECT
++  RANK() OVER (ORDER BY SUM(eu.usage_count) DESC) as `rank`,
++  tu.login_name as name,
++  SUM(eu.usage_count) as total
++FROM emote_usage as eu
++JOIN stream_message sm
++  ON sm.id = eu.stream_message_id
++JOIN twitch_user tu 
++  ON tu.id = sm.twitch_user_id
++WHERE eu.emote_id = 14919
++GROUP BY name
++ORDER BY total DESC
+
+# 2026-08-25 22:34:03.475535
++\e
+
+# 2026-08-25 22:35:18.350310
++SELECT * FROM emote_usage JOIN stream_message sm ON sm.id = emote_usage.stream_message_id WHERE emote_id = 14919 ORDER BY sm.timestamp LIMIT 1
+
+# 2026-08-25 22:36:18.287446
++select SUM(usage_count) from emote_usage where emote_id = 14919
+
+# 2026-08-25 22:36:36.219212
++select * from twitch_user where id = 83
+
+# 2026-08-25 22:37:12.564383
++SELECT * FROM emote_usage JOIN stream_message sm ON sm.id = emote_usage.stream_message_id JOIN twitch_user tu on tu.id = sm.twitch_user_id WHERE emote_id = 14919 ORDER BY sm.timestamp LIMIT 5\G
+
+# 2026-08-25 22:59:39.407954
++exit
+
+# 2026-08-27 22:32:14.484102
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND timestamp >= '2026-08-24'
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (72240)
++AND sm.timestamp >= '2026-08-24' 
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:32:34.052611
++select * from stream where channel_id = 72240
+
+# 2026-08-27 22:32:40.955536
++select * from stream where twitch_user_id = 72240
+
+# 2026-08-27 22:33:08.042654
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (72240)
++AND sm.stream_id = 1104
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:33:33.181562
++\e
+
+# 2026-08-27 22:34:09.663842
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  LEFT JOIN emote_usage eu on eu.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++AND sm.stream_id = 1104
++AND eu IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:34:11.391965
++\e
+
+# 2026-08-27 22:34:17.929741
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  LEFT JOIN emote_usage as eu on eu.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++AND sm.stream_id = 1104
++AND eu IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:34:19.046528
++\e
+
+# 2026-08-27 22:34:29.372485
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  LEFT JOIN emote_usage on emote_usage.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++AND sm.stream_id = 1104
++AND emote_usage IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:34:31.512679
++\e
+
+# 2026-08-27 22:34:37.202662
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  JOIN emote_usage on emote_usage.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++AND sm.stream_id = 1104
++AND emote_usage IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:34:38.286989
++\e
+
+# 2026-08-27 22:34:42.833893
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  AND JOIN emote_usage on emote_usage.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++AND sm.stream_id = 1104
++AND emote_usage IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:34:43.482084
++\e
+
+# 2026-08-27 22:34:47.988822
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  JOIN emote_usage on emote_usage.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++AND sm.stream_id = 1104
++AND emote_usage IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:34:52.487675
++show columns from emote_usage
+
+# 2026-08-27 22:34:53.920697
++\e
+
+# 2026-08-27 22:34:58.363966
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  JOIN emote_usage on emote_usage.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++AND sm.stream_id = 1104
++AND emote_usage IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:35:00.148636
++\e
+
+# 2026-08-27 22:35:09.238666
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN emote_usage on emote_usage.stream_message_id = sm.id
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++WHERE sm.channel_id in (72240)
++AND sm.stream_id = 1104
++AND emote_usage IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:35:10.186661
++\e
+
+# 2026-08-27 22:35:37.613031
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  JOIN emote_usage on emote_usage.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++AND sm.stream_id = 1104
++AND emote_usage IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:36:21.233673
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  LEFT JOIN emote_usage eu on eu.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++  AND sm.stream_id = 1104
++  AND eu.stream_message_id IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:36:51.667048
++\e
+
+# 2026-08-27 22:37:02.176302
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  LEFT JOIN emote_usage on emote_usage.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++AND sm.stream_id = 1104
++AND emote_usage IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:37:02.921713
++\e
+
+# 2026-08-27 22:37:35.529629
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message 
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT 
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  LEFT JOIN emote_usage on emote_usage.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++AND sm.stream_id = 1104
++AND emote_usage IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:37:37.879645
++\e
+
+# 2026-08-27 22:37:43.160992
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message
++  WHERE channel_id IN (72240) AND stream_id = 1104
++)
++SELECT
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  LEFT JOIN emote_usage eu on eu.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++  AND sm.stream_id = 1104
++  AND eu.stream_message_id IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:39:18.442995
++select * from stream where twitch_user_id = 72240
+
+# 2026-08-27 22:39:29.620846
++select * from stream where id = 1104
+
+# 2026-08-27 22:40:31.450987
++select * from stream_message where twitch_user_id = GetUserIdFromLogin('3_stan_') and stream_id = 1104 limit  
+
+# 2026-08-27 22:40:32.524927
++select * from stream_message where twitch_user_id = GetUserIdFromLogin('3_stan_') and stream_id = 1104 limit  1
+
+# 2026-08-27 22:41:15.927905
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message
++  WHERE channel_id IN (72240) AND stream_id = 1104 AND timestamp >= '2026-08-25 16:14:36'
++)
++SELECT
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  LEFT JOIN emote_usage eu on eu.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++  AND sm.stream_id = 1104
++  AND eu.stream_message_id IS NULL
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-27 22:41:17.665749
++\e
+
+# 2026-08-27 22:41:28.260209
++WITH total_messages AS (
++  SELECT COUNT(*) AS total FROM stream_message
++  WHERE channel_id IN (72240) AND stream_id = 1104 AND timestamp >= '2026-08-25 16:14:36'
++)
++SELECT
++  RANK() OVER (ORDER BY COUNT(sm.id) DESC) as `rank`,
++  tu.login_name as name,
++  COUNT(sm.id) as messages_sent,
++  ROUND((COUNT(sm.id) / (SELECT total FROM total_messages)) * 100, 2) AS chat_percentage
++FROM stream_message as sm
++  JOIN twitch_user tu on tu.id = sm.twitch_user_id
++  LEFT JOIN emote_usage eu on eu.stream_message_id = sm.id
++WHERE sm.channel_id in (72240)
++  AND sm.stream_id = 1104
++  AND eu.stream_message_id IS NULL
++  AND timestamp >= '2026-08-25 16:14:36'
++GROUP BY tu.id, tu.login_name
++ORDER BY `rank`
+
+# 2026-08-28 04:23:54.369043
++exit
+
+# 2026-08-30 17:45:59.448545
++select * from stream_message where twitch_user_id = 3 and contents like '%literally it%'\G
+
+# 2026-08-30 17:47:45.117519
++select * from stream_message where twitch_user_id = 3 and contents like '%just sounds like%'\G
+
+# 2026-08-30 17:47:56.635281
++select * from stream where id = 16
+
+# 2026-08-30 17:50:12.228909
++\f GetUser https://www.youtube.com/watch?v=4nK0DC6Huao
+
+# 2026-08-30 17:50:18.315102
++\f GetUser onyxstar
+
+# 2026-08-30 17:50:25.425259
++\e
+
+# 2026-08-30 17:52:37.747813
++select streamer.login_name as streamer ,count(sm.id) as messages
++from stream_message as sm
++join twitch_user streamer on streamer.id = sm.channel_id
++where sm.twitch_user_id = 216
++group by streamer
+
+# 2026-08-30 17:52:43.802942
++\e
+
+# 2026-08-30 17:52:59.538150
++select *
++from stream_message as sm
++where sm.twitch_user_id = 216
++order by timestamp
+
+# 2026-08-30 17:53:04.743827
++select *
++from stream_message as sm
++where sm.twitch_user_id = 216
++order by timestamp\G
+
+# 2026-08-30 17:53:45.598913
++\e
+
+# 2026-08-30 17:54:48.822099
++select 
++  stream.name as title,
++  stream.start_timestamp as day,
++  COUNT(sm.id)
++from stream_message as sm
++join stream on stream.id = sm.stream_id
++where sm.twitch_user_id = 216
++group by title
++order by day
+
+# 2026-08-30 17:54:50.163945
++\e
+
+# 2026-08-30 17:54:55.216966
++select 
++  stream.title as title,
++  stream.start_timestamp as day,
++  COUNT(sm.id)
++from stream_message as sm
++join stream on stream.id = sm.stream_id
++where sm.twitch_user_id = 216
++group by title
++order by day
+
+# 2026-08-30 17:55:00.446273
++\e
+
+# 2026-08-30 17:56:29.052280
++select
++  stream.title as title,
++  stream.start_timestamp as day,
++  COUNT(sm.id)
++from stream
++join stream_message sm 
++  on sm.twitch_user_id = 216
++  and sm.stream_id = stream.id
++group by title
++order by day
++
++  
+
+# 2026-08-30 17:56:44.147473
++\e
+
+# 2026-08-30 17:56:47.493145
++select
++  stream.title as title,
++  stream.start_timestamp as day,
++  COUNT(sm.id)
++from stream
++join stream_message sm 
++  on sm.twitch_user_id = 216
++  and sm.stream_id = stream.id
++group by title
++order by day
+
+# 2026-08-30 17:59:50.186872
++select
++  stream.title as title,
++  stream.start_timestamp as day,
++  COUNT(sm.id)
++from stream
++join stream_message sm 
++  on sm.twitch_user_id = 216
++  and sm.stream_id = stream.id
++group by stream.id, stream.title, stream.start_timestamp
++order by day
+
+# 2026-08-30 18:00:48.588601
++select
++  stream.title as title,
++  stream.start_timestamp as day,
++  COUNT(sm.id)
++from stream
++left join stream_message sm 
++  on sm.stream_id = stream.id
++  and sm.twitch_user_id = 216
++group by stream.id, stream.title, stream.start_timestamp
++order by day
+
+# 2026-08-30 18:01:04.696501
++\e
+
+# 2026-08-30 18:01:15.794542
++select
++  stream.title as title,
++  stream.start_timestamp as day,
++  COUNT(sm.id)
++from stream
++left join stream_message sm 
++  on sm.stream_id = stream.id
++  and sm.twitch_user_id = 216
++  and channel_id in (1, 2)
++group by stream.id, stream.title, stream.start_timestamp
++order by day
+
+# 2026-08-30 18:01:45.410579
++\e
+
+# 2026-08-30 18:02:00.303814
++select
++  stream.title as title,
++  stream.start_timestamp as day,
++  COUNT(sm.id)
++from stream
++left join stream_message sm 
++  on sm.stream_id = stream.id
++  and sm.twitch_user_id = 216
++where stream.channel_id in (1, 2)
++group by stream.id, stream.title, stream.start_timestamp
++order by day
+
+# 2026-08-30 18:02:01.754694
++\e
+
+# 2026-08-30 18:02:05.590825
++select
++  stream.title as title,
++  stream.start_timestamp as day,
++  COUNT(sm.id)
++from stream
++left join stream_message sm 
++  on sm.stream_id = stream.id
++  and sm.twitch_user_id = 216
++where sm.channel_id in (1, 2)
++group by stream.id, stream.title, stream.start_timestamp
++order by day
+
+# 2026-08-30 18:02:53.252017
++select
++  stream.title as title,
++  stream.start_timestamp as day,
++  COUNT(sm.id)
++from stream
++left join stream_message sm 
++  on sm.stream_id = stream.id
++  and sm.twitch_user_id = 216
++where stream.twitch_user_id in (1, 2)
++group by stream.id, stream.title, stream.start_timestamp
++order by day
+
+# 2026-08-30 18:03:59.130922
++\e
+
+# 2026-08-30 18:04:10.583815
++select
++  stream.id as id,
++  stream.title as title,
++  stream.start_timestamp as day,
++  COUNT(sm.id) as messages
++from stream
++left join stream_message sm 
++  on sm.stream_id = stream.id
++  and sm.twitch_user_id = 216
++where stream.twitch_user_id in (1, 2)
++group by stream.id, stream.title, stream.start_timestamp
++order by day
+
+# 2026-08-30 18:08:10.710034
++\e
+
+# 2026-08-30 18:08:39.630408
++select
++  stream.id as id,
++  stream.title as title,
++  stream.start_timestamp as day,
++  COUNT(sm.id) as messages
++from stream
++left join stream_message sm 
++  on sm.stream_id = stream.id
++  and sm.twitch_user_id = (select id from twitch_user where login_name like "%dewdhole%" limit 1)
++where stream.twitch_user_id in (1, 2)
++group by stream.id, stream.title, stream.start_timestamp
++order by day
+
+# 2026-08-31 02:42:24.292083
++exit
+
+# 2026-09-02 18:45:23.155403
++\f GetData
+
+# 2026-09-02 18:48:48.565627
++SELECT (SELECT COUNT(*) FROM stream_message WHERE channel_id in (1,2)) as messages,
+
+# 2026-09-02 18:48:56.270138
++SELECT COUNT(*) FROM stream_message WHERE channel_id in (1,2))
+
+# 2026-09-02 18:49:01.710315
++SELECT COUNT(*) FROM stream_message WHERE channel_id in (1,2)
+
+# 2026-09-03 04:16:11.719486
++exit
+
+# 2026-09-06 21:11:15.641455
++select * from donation_event
+
+# 2026-09-06 21:11:20.450160
++select * from donation_event where event_type = 'streamlabs_donation' order by amount desc
+
+# 2026-09-06 21:11:26.511289
++select * from donation_event where event_type = 'streamlabs_donation' order by timestamp desc
+
+# 2026-09-06 21:33:39.690680
++exit
+
+# 2026-09-06 22:57:03.721674
++select * from donation_event 
+
+# 2026-09-06 22:57:18.803458
++select * from donation_event where event_type = 'streamlabs_donation' and unknown_user_id is not null
+
+# 2026-09-06 22:57:31.790094
++show columns from unknown_user 
+
+# 2026-09-06 22:57:35.656155
++select * from donation_event where event_type = 'streamlabs_donation' and unknown_user_id is not null
+
+# 2026-09-06 22:57:36.529445
++\e
+
+# 2026-09-06 22:57:53.594374
++select * from donation_event 
++join unknown_user uu on uu.name = "link"
++where event_type = 'streamlabs_donation' and unknown_user_id is not null
+
+# 2026-09-06 22:58:21.873230
++select * from donation_event where event_type = 'streamlabs_donation' join twitch_user tu on tu.id = donator_twitch_user_id where amount = 150.0
+
+# 2026-09-06 22:58:29.891248
++\e
+
+# 2026-09-06 22:58:41.109254
++select * from donation_event join twitch_user tu on tu.id = donator_twitch_user_id where event_type = 'streamlabs_donation' AND amount = 150.0
+
+# 2026-09-06 22:58:56.590279
++select * from donation_event where id = 20501
+
+# 2026-09-06 22:59:18.519386
++update donation_event set donator_twitch_user_id = 1 where donation_event.id = 20501
+
+# 2026-09-06 22:59:20.265303
++select * from donation_event where id = 20501
+
+# 2026-09-06 22:59:25.361296
++\e
+
+# 2026-09-06 23:00:06.247316
++update donation_event set donator_twitch_user_id = 3 where donation_event.id = 20501
+
+# 2026-09-06 23:00:17.860310
++\e
+
+# 2026-09-06 23:00:42.604485
++select
++  event_type,
++  count(amount) as donations
++from donation_event
++where donatior_twitch_user_id = 3
++and donation_receiver_twitch_user_id = 1
++group by event_type
+
+# 2026-09-06 23:00:44.458651
++\e
+
+# 2026-09-06 23:00:48.686314
++select
++  event_type,
++  count(amount) as donations
++from donation_event
++where donator_twitch_user_id = 3
++and donation_receiver_twitch_user_id = 1
++group by event_type
+
+# 2026-09-06 23:00:56.212524
++\e
+
+# 2026-09-06 23:00:58.780499
++select
++*
++from donation_event
++where donator_twitch_user_id = 3
++and donation_receiver_twitch_user_id = 1
++group by event_type
+
+# 2026-09-06 23:01:03.302738
++select
++*
++from donation_event
++where donator_twitch_user_id = 3
++and donation_receiver_twitch_user_id = 1
+
+# 2026-09-06 23:01:11.297575
++select
++  event_type,
++  count(amount) as donations
++from donation_event
++where donator_twitch_user_id = 3
++and donation_receiver_twitch_user_id = 1
++group by event_type
+
+# 2026-09-06 23:01:18.370770
++select
++  event_type,
++  sum(amount) as donations
++from donation_event
++where donator_twitch_user_id = 3
++and donation_receiver_twitch_user_id = 1
++group by event_type
+
+# 2026-09-06 23:02:31.502672
++\e
+
+# 2026-09-06 23:02:42.110478
++select
++  event_type,
++  sum(amount) as donations
++from donation_event
++where donator_twitch_user_id = 3
++and donation_receiver_twitch_user_id = 1
++and timestamp >= "2026-02-01"
++group by event_type
+
+# 2026-09-07 03:31:53.809903
++exit
+
+# 2026-09-10 01:24:49.038178
++\e
+
+# 2026-09-10 01:26:59.369906
++select
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  JOIN stream_message sm
++  on sm.twitch_user_id = GetIdFromLogin('thedewdhole')
++  and sm.stream_id = s.id
++where s.channel_id in (1, 2)
++order by timestamp
++desc
+
+# 2026-09-10 01:27:01.113810
++\e
+
+# 2026-09-10 01:27:05.476151
++select
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  JOIN stream_message sm
++  on sm.twitch_user_id = GetIdFromLogin('thedewdhole')
++  and sm.stream_id = s.id
++where channel_id in (1, 2)
++order by timestamp
++desc
+
+# 2026-09-10 01:27:17.816429
++\e
+
+# 2026-09-10 01:27:23.037990
++select
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('thedewdhole')
++  and sm.stream_id = s.id
++where channel_id in (1, 2)
++order by timestamp
++desc
+
+# 2026-09-10 01:27:40.904816
++SELECT
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('thedewdhole')
++  and sm.stream_id = s.id
++where channel_id in (1, 2)
++GROUP BY timestamp
++order by timestamp desc
+
+# 2026-09-10 01:28:01.801852
++SELECT
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('thedewdhole')
++  and sm.stream_id = s.id
++where channel_id in (1, 2)
++GROUP BY DATE_FORMAT(s.start_timestamp, "%Y-%d-%m")
++order by timestamp desc
+
+# 2026-09-10 01:28:55.694305
++SELECT
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('thedewdhole')
++  and sm.stream_id = s.id
++where s.channel_id in (1, 2)
++GROUP BY DATE_FORMAT(s.start_timestamp, "%Y-%d-%m")
++order by timestamp desc
+
+# 2026-09-10 01:29:02.605154
++SELECT
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('thedewdhole')
++  and sm.stream_id = s.id
++where channel_id in (1, 2)
++GROUP BY DATE_FORMAT(s.start_timestamp, "%Y-%d-%m")
++order by timestamp desc
+
+# 2026-09-10 01:29:35.914085
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('thedewdhole')
++  and sm.stream_id = s.id
++where s.channel_id in (1, 2)
++GROUP BY s.id
++order by s.start_timestamp desc
+
+# 2026-09-10 01:29:39.145687
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('thedewdhole')
++  and sm.stream_id = s.id
++where channel_id in (1, 2)
++GROUP BY s.id
++order by s.start_timestamp desc
+
+# 2026-09-10 01:30:04.860248
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('thedewdhole')
++  and sm.stream_id = s.id
++where channel_id in (1, 2)
++GROUP BY s.id
++order by s.start_timestamp
+
+# 2026-09-10 01:30:18.579148
++select id from stream where channel_id in (1, 2)
+
+# 2026-09-10 01:30:27.245111
++select id from stream where twitch_user_id in (1, 2)
+
+# 2026-09-10 01:30:35.191779
++select id from stream where twitch_user_id in (1, 2) order by timestamp
+
+# 2026-09-10 01:30:45.315224
++select id from stream where twitch_user_id in (1, 2) order by stream_start_timestamp
+
+# 2026-09-10 01:30:49.240113
++select id from stream where twitch_user_id in (1, 2) order by stream_start
+
+# 2026-09-10 01:30:53.317400
++show columns from stream
+
+# 2026-09-10 01:30:58.233015
++select id from stream where twitch_user_id in (1, 2) order by start_timestamp
+
+# 2026-09-10 01:31:08.060442
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('thedewdhole')
++  and sm.stream_id = s.id
++where s.twitch_user_Id in (1, 2)
++GROUP BY s.id
++order by s.start_timestamp
+
+# 2026-09-10 01:31:14.107348
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('thedewdhole')
++  and sm.stream_id = s.id
++where s.twitch_user_id in (1, 2)
++GROUP BY s.id
++order by s.start_timestamp
+
+# 2026-09-10 03:28:39.203945
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('learningmyabcs')
++  and sm.stream_id = s.id
++where s.twitch_user_id in (1, 2)
++GROUP BY s.id
++order by s.start_timestamp
+
+# 2026-09-10 03:28:48.299076
++\e
+
+# 2026-09-10 03:28:53.908343
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('learningmyabcs')
++  and sm.stream_id = s.id 
++  and s.twitch_user_id in (1, 2)
++GROUP BY s.id
++order by s.start_timestamp
+
+# 2026-09-10 03:29:19.423087
++\e
+
+# 2026-09-10 03:29:41.214232
++explain SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('learningmyabcs')
++  and sm.stream_id = s.id 
++  and s.twitch_user_id in (1, 2)
++GROUP BY s.id
++order by s.start_timestamp
+
+# 2026-09-10 03:29:48.720704
++\e
+
+# 2026-09-10 03:30:15.627813
++explain SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('learningmyabcs')
++  and sm.stream_id = s.id 
++where s.twitch_user_id in (1, 2)
++GROUP BY s.id
++order by s.start_timestamp
+
+# 2026-09-10 03:30:40.517399
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('learningmyabcs')
++  and sm.stream_id = s.id 
++where s.twitch_user_id in (1, 2)
++GROUP BY s.id
++order by s.start_timestamp
+
+# 2026-09-10 03:33:50.478392
++\e
+
+# 2026-09-10 03:33:58.860441
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('linkthedot')
++  and sm.stream_id = s.id 
++where s.twitch_user_id in (1, 2)
+
+# 2026-09-10 03:34:03.449537
++\e
+
+# 2026-09-10 03:34:10.453489
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = GetUserIdFromLogin('linkthedot')
++  and sm.stream_id = s.id 
++where s.twitch_user_id in (1, 2)
++group by s.id
+
+# 2026-09-10 03:35:58.615003
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = 3
++  and sm.stream_id = s.id 
++where s.twitch_user_id in (1, 2)
++group by s.id
+
+# 2026-09-10 03:57:30.155681
++exit
+
+# 2026-09-10 16:11:43.925347
++\f GetUser CordiesD1e
+
+# 2026-09-10 16:11:49.357692
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = 83
++  and sm.stream_id = s.id 
++where s.twitch_user_id in (1, 2)
++group by s.id
+
+# 2026-09-10 16:14:33.538159
++tee cordies-messages.txt
+
+# 2026-09-10 16:14:34.580515
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = 83
++  and sm.stream_id = s.id 
++where s.twitch_user_id in (1, 2)
++group by s.id
+
+# 2026-09-10 16:16:40.336161
++notee
+
+# 2026-09-10 16:17:53.444877
++\f GetUser mish
+
+# 2026-09-10 16:17:59.404759
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = 1174
++  and sm.stream_id = s.id 
++where s.twitch_user_id in (1, 2)
++group by s.id
+
+# 2026-09-10 16:18:05.316595
++\e
+
+# 2026-09-10 16:19:50.721014
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++  LEFT JOIN stream_message sm
++  on sm.twitch_user_id = 1174
++  and sm.stream_id = s.id 
++where s.twitch_user_id in (1, 2)
++group by s.id
++
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream_message sm
++  JOIN stream s
++  AND s.id = sm.stream_id
++  AND sm.twitch_user_id = 1174
++  AND s.twitch_user_id in (1, 2)
++GROUP BY s.id
+
+# 2026-09-10 16:19:51.687042
++\e
+
+# 2026-09-10 16:19:54.614465
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream_message sm
++  JOIN stream s
++  AND s.id = sm.stream_id
++  AND sm.twitch_user_id = 1174
++  AND s.twitch_user_id in (1, 2)
++GROUP BY s.id
+
+# 2026-09-10 16:19:58.326704
++\e
+
+# 2026-09-10 16:20:04.378646
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream_message sm
++  JOIN stream s
++  AND s.id = sm.stream_id
++  AND sm.twitch_user_id = 1174
++  AND s.twitch_user_id in (1, 2)
++GROUP BY s.id
+
+# 2026-09-10 16:20:09.130347
++\e
+
+# 2026-09-10 16:20:14.238164
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream_message sm
++  JOIN stream s
++  ON s.id = sm.stream_id
++  AND sm.twitch_user_id = 1174
++  AND s.twitch_user_id in (1, 2)
++GROUP BY s.id
+
+# 2026-09-10 16:20:18.545620
++\e
+
+# 2026-09-10 16:20:21.976514
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, "%Y-%d-%m") as timestamp,
++  COUNT(sm.id) as messages
++FROM stream_message sm
++  RIGHT JOIN stream s
++  ON s.id = sm.stream_id
++  AND sm.twitch_user_id = 1174
++  AND s.twitch_user_id in (1, 2)
++GROUP BY s.id
+
+# 2026-09-10 16:21:12.245227
++\e
+
+# 2026-09-10 16:22:33.159685
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, '%Y-%m-%d') as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++LEFT JOIN stream_message sm
++  ON sm.stream_id = s.id
++  AND sm.twitch_user_id = 1174
++WHERE s.twitch_user_id IN (1, 2)
++GROUP BY s.id
+
+# 2026-09-10 16:22:54.013870
++tee mish-messages.txt
+
+# 2026-09-10 16:22:55.544949
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, '%Y-%m-%d') as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++LEFT JOIN stream_message sm
++  ON sm.stream_id = s.id
++  AND sm.twitch_user_id = 1174
++WHERE s.twitch_user_id IN (1, 2)
++GROUP BY s.id
+
+# 2026-09-10 16:24:24.362825
++\f GetUser fr1ill
+
+# 2026-09-10 16:24:26.285648
++\f GetUser fr1ll
+
+# 2026-09-10 16:24:35.167931
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, '%Y-%m-%d') as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++LEFT JOIN stream_message sm
++  ON sm.stream_id = s.id
++  AND sm.twitch_user_id = 8621
++WHERE s.twitch_user_id IN (1, 2)
++GROUP BY s.id
+
+# 2026-09-10 16:25:01.242716
++notee
+
+# 2026-09-10 16:25:35.705035
++select * from stream where id = 1076
+
+# 2026-09-10 16:26:13.356056
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, '%Y-%m-%d') as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++LEFT JOIN stream_message sm
++  ON sm.stream_id = s.id
++  AND sm.twitch_user_id = 3
++WHERE s.twitch_user_id IN (1, 2)
++GROUP BY s.id
+
+# 2026-09-10 16:26:20.992762
++tee link-messages.txt
+
+# 2026-09-10 16:26:22.171390
++SELECT
++  s.id,
++  DATE_FORMAT(s.start_timestamp, '%Y-%m-%d') as timestamp,
++  COUNT(sm.id) as messages
++FROM stream s
++LEFT JOIN stream_message sm
++  ON sm.stream_id = s.id
++  AND sm.twitch_user_id = 3
++WHERE s.twitch_user_id IN (1, 2)
++GROUP BY s.id
+
+# 2026-09-10 16:30:00.158402
++notee
+
+# 2026-09-10 16:31:05.221213
++select * from stream where id = 36
+
+# 2026-09-10 16:31:24.998003
++select * from stream where id = 35
+
+# 2026-09-10 16:32:53.798144
++select * from stream where id = 858
+
+# 2026-09-10 16:34:27.865518
++select * from stream where id = 1125
+
+# 2026-09-10 22:04:05.042405
++exit
+
+# 2026-09-14 20:38:57.223765
++select count(*) from stream_message where `GetUserIdFromLogin`('RemnantAdvent') and stream_id is null and contents = "unlucky" 
+
+# 2026-09-14 20:39:12.302707
++select count(*) from stream_message where twitch_user_id = `GetUserIdFromLogin`('RemnantAdvent') and stream_id is null and contents = "unlucky" 
+
+# 2026-09-14 20:39:29.253632
++select timestamp from stream_message where twitch_user_id = `GetUserIdFromLogin`('RemnantAdvent') and stream_id is null and contents = "unlucky" order by timestamp 
+
+# 2026-09-14 23:17:03.594348
++exit
+
+# 2026-09-15 12:49:44.032678
++\f GetUser Kozumi
+
+# 2026-09-15 21:47:14.044330
++exit
+
+# 2026-09-25 12:44:50.072048
++select * from stream where name like '%hi i\'m shondo!'
+
+# 2026-09-25 12:44:55.013655
++select * from stream where title like '%hi i\'m shondo!'
+
+# 2026-09-25 12:44:59.272292
++select * from stream where title like '%hi i\'m shondo'
+
+# 2026-09-25 12:45:01.135488
++select * from stream where title like '%hi i\'m shondo%'
+
+# 2026-09-25 12:45:09.355637
++select count(*) from stream where title like '%hi i\'m shondo%'
+
+# 2026-09-25 18:00:08.053242
++select * from stream where title like '%voices%'
+
+# 2026-09-25 18:00:56.019615
++select * from stream where title like '%alien%'
+
+# 2026-09-25 18:01:27.901486
++select * from stream where title like '%ENDURANCE%'
+
+# 2026-09-25 18:02:30.898557
++select * from stream_message where timestamp between "2025-01-10" and "2025-01-12" and twitch_user_id = 3 and contents like '%maid%' 
+
+# 2026-09-26 01:51:12.061969
++exit
+
+# 2026-09-26 22:49:28.229825
++\f GetUser Nina
+
+# 2026-09-26 22:49:50.227783
++select count(*) from stream_message where channel_id = 1098
+
+# 2026-09-26 22:49:58.595447
++select count(*) from stream_message where twitch_user_id = 3
+
+# 2026-09-26 22:50:41.054279
++select count(*) from stream_message where twitch_user_id = 3 and channel_id = 1098 and contents like "%@hiroto%"
+
+# 2026-09-26 22:50:47.940205
++select * from stream_message where twitch_user_id = 3 and channel_id = 1098 and contents like "%@hiroto%"
+
+# 2026-09-26 22:51:44.596246
++select * from stream where id = 1203
+
+# 2026-09-26 23:04:19.773861
++exit
+
+# 2026-09-27 01:58:39.019462
++select * from stream_message where twitch_user_id = 3 and channel_id = 1098 and contents like "%eat%"
+
+# 2026-09-27 02:04:21.211690
++exit
+
+# 2026-09-27 18:55:36.658793
++select * from stream_message where twitch_user_id = 3 and contents like "%@frill%"
+
+# 2026-09-27 18:55:41.602152
++select * from stream_message where twitch_user_id = 3 and contents like "%@fr1ll%"
+
+# 2026-09-27 18:55:46.960608
++select * from stream_message where twitch_user_id = 3 and contents like "%@fr1%"
+
+# 2026-09-27 18:55:51.751449
++\f GetUser sunny
+
+# 2026-09-27 18:55:57.689961
++select * from stream_message where twitch_user_id = 3 and contents like "%@synnyfr1ll%"
+
+# 2026-09-27 18:56:09.288641
++select * from stream_message where twitch_user_id = 3 and contents like "%@sunnyfr1ll%"
+
+# 2026-09-27 18:56:54.065846
++select * from stream_message where twitch_user_id = 8621 and contents like "%@linkthedot%"
+
+# 2026-09-27 18:57:31.782663
++select * from stream_message where stream_id = 1076 and twitch_user_id = 3 and contents like 'crazy'
+
+# 2026-09-27 18:57:34.978457
++select * from stream_message where stream_id = 1076 and twitch_user_id = 3 and contents like 'Some'
+
+# 2026-09-27 18:57:38.227870
++select * from stream_message where stream_id = 1076 and twitch_user_id = 3 and contents like '%some%'
+
+# 2026-09-27 18:57:50.256876
++select * from stream_message where stream_id = 1076 and twitch_user_id = 3 and contents like '%crazy sometimes%'\G
+
+# 2026-09-27 18:58:10.148082
++select * from stream_message where stream_id = 1076 and twitch_user_id = 8621
+
+# 2026-09-27 18:58:19.555690
++select * from stream_message where stream_id = 1076 and twitch_user_id = 8621 limit 1\G 
+
+# 2026-09-27 18:58:43.883350
++select * from stream_message where stream_id = 1076 and twitch_user_id = 8621 limit 2\G 
+
+# 2026-09-27 18:59:02.488796
++select * from stream_message where twitch_user_id = 3 and contents like "%@sunnyfr1ll%"
+
+# 2026-09-27 18:59:08.213802
++select * from stream_message where twitch_user_id = 3 and contents like "%@sunnyfr1ll%"\G
+
+# 2026-09-28 01:01:33.417299
++\f GetUser brop
+
+# 2026-09-28 01:01:52.698153
++select * from stream_message where twitch_user_id = 49 and context = "of course it was shondo"
+
+# 2026-09-28 01:01:59.182116
++select * from stream_message where twitch_user_id = 49 and contents = "of course it was shondo"
+
+# 2026-09-28 01:02:23.124073
++select * from stream where id = 101
+
+# 2026-09-28 01:53:55.946656
++\f GetUser advent
+
+# 2026-09-28 01:54:03.277141
++select * from stream_message where twitch_user_id = 53
+
+# 2026-09-28 01:54:23.246465
++select * from stream_message where twitch_user_id = 53 and contents like "%nep%"
+
+# 2026-09-28 01:54:27.150982
++select * from stream_message where twitch_user_id = 53 and contents like "%nepu%"
+
+# 2026-09-28 01:54:34.123940
++select * from stream_message where twitch_user_id = 53 and contents like "unlucky"
+
+# 2026-09-28 01:54:39.117275
++exit
+
+# 2026-09-28 01:58:57.807360
++select * from stream
+
+# 2026-09-28 01:59:17.355852
++select * from stream_message where stream_id = 1207 and contents like "%linkthedot%"
+
+# 2026-09-28 02:10:57.792269
++edxit
+
+# 2026-09-28 02:10:58.487803
++exit
+
+# 2026-09-28 13:25:40.406776
++select * from stream where twitch_vod_id = 2880305543
+
+# 2026-09-28 13:25:59.609451
++select * from stream_message where stream_id = 1186 and contents like "%hung himself%"
+
+# 2026-09-28 13:26:02.848472
++select * from stream_message where stream_id = 1186 and contents like "%hung%"
+
+# 2026-09-28 13:26:10.075650
++select * from stream_message where stream_id = 1186 and contents like "%killed%"
+
+# 2026-09-28 13:26:13.087657
++select * from stream_message where stream_id = 1186 and contents like "%killed himself%"
+
+# 2026-09-28 13:26:15.429628
++select * from stream_message where stream_id = 1186 and contents like "%killed hims%"
+
+# 2026-09-28 13:26:16.775503
++select * from stream_message where stream_id = 1186 and contents like "%killed him%"
+
+# 2026-09-28 13:29:24.605661
++select * from stream_message where stream_id = 1186 and contents like "%curse%"
+
+# 2026-09-28 13:29:34.772421
++select * from stream_message where stream_id = 1186 and contents like "%curse%curse%curse%"
+
+# 2026-09-28 13:29:37.636835
++select * from stream_message where stream_id = 1186 and contents like "%curse%curse%curse%"\G
+
+# 2026-09-28 20:22:33.285410
++exit
+
+# 2026-09-29 20:19:53.557614
++\f GetUser dandere
+
+# 2026-09-29 20:20:37.950655
++select * from stream_message where twitch_user_id = 24096
+
+# 2026-09-29 20:21:54.347879
++select id,is_first_message,timestamp,contents,channel.login_name as channel,is_subscriber from stream_message join twitch_user channel on stream_message.channel_id = channel.id where twitch_user_id = 24096
+
+# 2026-09-29 20:22:14.753688
++select stream_messageid,is_first_message,timestamp,contents,channel.login_name as `channel`,is_subscriber from stream_message join twitch_user channel on stream_message.channel_id = `channel`.id where twitch_user_id = 24096
+
+# 2026-09-29 20:22:19.571807
++select stream_message.id,is_first_message,timestamp,contents,channel.login_name as `channel`,is_subscriber from stream_message join twitch_user channel on stream_message.channel_id = `channel`.id where twitch_user_id = 24096
+
+# 2026-09-29 20:26:14.638239
++exit
+
+# 2026-09-29 21:18:06.543952
++\f GetUser kuro0___
+
+# 2026-09-29 21:18:16.911671
++select stream_message.id,is_first_message,timestamp,contents,channel.login_name as `channel`,is_subscriber from stream_message join twitch_user channel on stream_message.channel_id = `channel`.id where twitch_user_id = 91338
+
+# 2026-09-29 21:18:42.383344
++show columns from donation_event
+
+# 2026-09-29 21:18:48.133779
++show tables 
+
+# 2026-09-29 21:19:05.776423
++select * from gift_sub_recipient where gift_sub_recipient = 91338 
+
+# 2026-09-29 21:19:21.373736
++show columns from gift_sub_recipient
+
+# 2026-09-29 21:19:30.363711
++select * from gift_sub_recipient where twitch_user_id = 91338
+
+# 2026-09-29 21:19:40.402911
++select * from donation_event where id = 21278
+
+# 2026-09-29 21:19:51.088319
++select * from twitch_user where id = 91292
+
+# 2026-09-29 21:20:53.127033
++select * from gift_sub_recipient join donation_event de on donation_event_id = de.id where gift_sub_recipient = 91338
+
+# 2026-09-29 21:21:01.791075
++select * from gift_sub_recipient gsr join donation_event de on gsr.donation_event_id = de.id where gift_sub_recipient = 91338
+
+# 2026-09-29 21:21:20.459951
++\e
+
+# 2026-09-29 21:21:35.304866
++select 
++  * 
++from gift_sub_recipient gsr 
++join donation_event de 
++  on gsr.donation_event_id = de.id 
++where gift_sub_recipient = 91338
+
+# 2026-09-29 21:21:45.081312
++select 
++  * 
++from gift_sub_recipient gsr 
++join donation_event de 
++  on gsr.donation_event_id = de.id 
++where dsr.gift_sub_recipient = 91338
+
+# 2026-09-29 21:21:50.447940
++select 
++  * 
++from gift_sub_recipient gsr 
++join donation_event de 
++  on gsr.donation_event_id = de.id 
++where dsr.twitch_user_id = 91338
+
+# 2026-09-29 21:21:58.841275
++select 
++  * 
++from gift_sub_recipient gsr 
++join donation_event de 
++  on gsr.donation_event_id = de.id 
++where gsr.twitch_user_id = 91338
+
+# 2026-09-29 21:22:16.382109
++select 
++  receiver
++from gift_sub_recipient gsr 
++join donation_event de 
++  on gsr.donation_event_id = de.id 
++where gsr.twitch_user_id = 91338
+
+# 2026-09-29 21:22:19.390203
++\e
+
+# 2026-09-29 21:22:46.910278
++select 
++  *
++from gift_sub_recipient gsr 
++join donation_event de 
++  on gsr.donation_event_id = de.id 
++join twitch_user donator
++  on de.donator_twitch_user_id = donator.id
++where gsr.twitch_user_id = 91338\G
+
+# 2026-09-29 21:22:55.167156
++\e
+
+# 2026-09-29 21:23:58.372364
++select 
++  receiver.login_name as receiver,
++  donator.login_name as donator,
++  de.*
++from gift_sub_recipient gsr 
++join donation_event de 
++  on gsr.donation_event_id = de.id 
++join twitch_user donator
++  on de.donator_twitch_user_id = donator.id
++join twitch_user receiver
++  on gsr.twitch_user_id = receiver.id
++where gsr.twitch_user_id = 91338\G
+
+# 2026-09-29 22:19:46.134428
++exit
+
+# 2026-10-02 21:12:50.829565
++\f GetUser DR_Animegaming
+
+# 2026-10-02 21:13:07.038601
++select * from stream_message where twitch_user_id = 87913 and contents like '%Cheer%'
+
+# 2026-10-02 21:13:09.330416
++select * from stream_message where twitch_user_id = 87913 and contents like '%Cheer%'\G
+
+# 2026-10-02 21:13:38.002631
++select contents from stream_message where twitch_user_id = 87913 and contents like '%Cheer%'\G
+
+# 2026-10-02 21:13:41.528174
++select contents from stream_message where twitch_user_id = 87913 and contents like '%Cheer%'
+
+# 2026-10-02 21:13:47.445335
++select contents from stream_message where twitch_user_id = 87913 and contents like '%Cheer%'\G
+
+# 2026-10-02 21:14:40.055716
++select tu.login_name as name,contents from stream_message join twitch_user tu on tu.id = stream_message.twitch_user_id where twitch_user_id = 87913 and contents like '%Cheer%'
+
+# 2026-10-02 21:15:07.581469
++tee fag.txt
+
+# 2026-10-02 21:15:09.308637
++select tu.login_name as name,contents from stream_message join twitch_user tu on tu.id = stream_message.twitch_user_id where twitch_user_id = 87913 and contents like '%Cheer%'
+
+# 2026-10-02 21:15:11.004439
++notee
+
+# 2026-10-02 23:16:23.591546
++exit
+
+# 2026-10-03 18:15:09.752786
++select * from stream_message where contents like "%forbidden%" and timestamp >= "2026-01-01"
+
+# 2026-10-03 18:16:08.096105
++\
+
+# 2026-10-03 18:16:37.384544
++\f GetUser uwu
+
+# 2026-10-03 18:17:13.242711
++select * from stream_message where twitch_user_id = 51 and contents like "INSANECAT" and timestamp >= "2026=01=01 
+
+# 2026-10-03 18:17:17.482676
++select * from stream_message where twitch_user_id = 51 and contents like "INSANECAT" and timestamp >= "2026=01-01"
+
+# 2026-10-03 18:17:24.232593
++select * from stream_message where twitch_user_id = 51 and contents like "%INSANECAT%" and timestamp >= "2026=01-01"
+
+# 2026-10-04 16:53:02.598538
++\f GetUser Link
+
+# 2026-10-04 16:53:13.127991
++select * from donation_event where amount = 500.0
+
+# 2026-10-04 16:53:24.193148
++select * from donation_event where amount = 500.0 and type = "streamlabs_donation"
+
+# 2026-10-04 16:53:29.379461
++select * from donation_event where amount = 500.0 and event_type = "streamlabs_donation"
+
+# 2026-10-04 16:54:10.922517
++select id,amount,timestamp,tu.login_name from donation_event join twitch_user tu on donation_event.donator_twitch_user_id = tu.id where amount = 500.0 and event_type = "streamlabs_donation"
+
+# 2026-10-04 16:54:18.063284
++select donation_event.id,amount,timestamp,tu.login_name from donation_event join twitch_user tu on donation_event.donator_twitch_user_id = tu.id where amount = 500.0 and event_type = "streamlabs_donation"
+
+# 2026-10-04 16:54:40.360604
++select * from donation_event where id = 21601
+
+# 2026-10-04 16:55:40.068285
++select * from twitch_user where id = 87894
+
+# 2026-10-04 16:56:08.375644
++update donation_event set donator_twitch_user_id = 3 where donation_event.id = 21601
+
+# 2026-10-04 16:56:13.182705
++select id,amount,timestamp,tu.login_name from donation_event join twitch_user tu on donation_event.donator_twitch_user_id = tu.id where amount = 500.0 and event_type = "streamlabs_donation"
+
+# 2026-10-04 16:56:16.715176
++select donation_event.id,amount,timestamp,tu.login_name from donation_event join twitch_user tu on donation_event.donator_twitch_user_id = tu.id where amount = 500.0 and event_type = "streamlabs_donation"
+
+# 2026-10-04 16:57:13.260967
++select event_type,sum(amount) from donation_event where donator_twitch_user_id = 3 group by event_type 
+
+# 2026-10-04 23:25:03.569661
++select * from stream
+
+# 2026-10-04 23:25:17.533333
++select * from stream_message where stream_id = 1234 and contents like '%mosque%'
+
+# 2026-10-05 03:32:29.799120
++exit
+
+# 2026-10-08 02:34:44.456372
++select * from channel_emote_cache
+
+# 2026-10-08 02:57:20.091858
++use twitch_tracker_db
+
+# 2026-10-08 02:57:21.332599
++select * from channel_emote_cache
+
+# 2026-10-08 02:58:09.701869
++select c.login_name as name,e.name from channel_emote_cache cec join twitch_user c on c.id = cec.twitch_user_id join emote e on e.id = cec.emote_id 
+
+# 2026-10-08 02:58:27.302970
++select c.login_name as name,e.name from channel_emote_cache cec join twitch_user c on c.id = cec.twitch_user_id join emote e on e.id = cec.emote_id sort by twitch_user_id
+
+# 2026-10-08 02:58:31.514558
++select c.login_name as name,e.name from channel_emote_cache cec join twitch_user c on c.id = cec.twitch_user_id join emote e on e.id = cec.emote_id order by twitch_user_id
+
+# 2026-10-08 03:02:28.107750
++select * from twitch_user where id = 0
+
+# 2026-10-08 03:38:52.574584
++select * from channel_emote_cache
+
+# 2026-10-08 03:42:07.971095
++show tables
+
+# 2026-10-08 03:42:21.377519
++show mig
+
+# 2026-10-08 03:42:24.329392
++show migrations 
+
+# 2026-10-08 03:42:28.061437
++select * from mig
+
+# 2026-10-08 03:42:30.840347
++select * from seaql_migrations
+
+# 2026-10-08 03:42:39.775270
++drop table channel_emote_cache 
+
+# 2026-10-08 03:42:56.363095
++delete from seaql_migrations where version = 'm20260412_202824_channel_emote_cache_table'
+
+# 2026-10-08 03:49:31.760988
++select * from seaql_migrations
+
+# 2026-10-08 03:49:37.980373
++show tables
+
+# 2026-10-08 03:49:45.096409
++select * from channel_emote_cache
+
+# 2026-10-08 04:01:01.273550
++exit
+
+# 2026-10-08 04:01:04.705399
++exit
+
+# 2026-10-10 00:02:21.771654
++select * from stream where twitch_vod_id = 2896144829
+
+# 2026-10-10 00:02:58.091191
++select id, timestamp, contents from stream_message where stream_id = 1250 and twitch_user_id = 3 
+
+# 2026-10-10 00:03:01.774683
++select id, timestamp, contents from stream_message where stream_id = 1250 and twitch_user_id = 3 \G
+
+# 2026-10-10 00:10:18.057037
++select * from donation_event where donator_twitch_user_id = 3
+
+# 2026-10-10 02:41:00.685727
++exit
+
+# 2026-10-15 01:14:53.658531
++\f GetUser AngelWolf
+
+# 2026-10-15 01:14:58.279074
++\f GetUser Angel%Wolf
+
+# 2026-10-15 01:15:15.570089
++select * from stream_message where twitch_user_id = angelxwolf 
+
+# 2026-10-15 01:15:22.295949
++select * from stream_message where twitch_user_id = 39081 
+
+# 2026-10-15 01:15:28.640057
++select * from stream_message where twitch_user_id = 39081\G
+
+# 2026-10-15 01:15:33.568883
++\f GetUser Angel%Wolf
+
+# 2026-10-15 01:15:36.195121
++select * from stream_message where twitch_user_id = 39081\G
+
+# 2026-10-15 01:15:37.881165
++\f GetUser Angel%Wolf
+
+# 2026-10-15 01:15:39.206029
++select * from stream_message where twitch_user_id = 39081
+
+# 2026-10-15 04:20:13.239637
++exit
+
+# 2026-10-16 21:16:57.735215
++select * from stream where title like "%shumo jail%"
+
+# 2026-10-16 21:19:39.901126
++select * from stream_message where twitch_user_id = 3 and timestamp between "2024-11-24 00:00:00" and "2024-11-25 00:00:00" and contents like "
+
+# 2026-10-16 21:19:42.760130
++select * from stream_message where twitch_user_id = 3 and timestamp between "2024-11-24 00:00:00" and "2024-11-25 00:00:00" and contents like "%smile%"
+
+# 2026-10-17 00:17:43.932842
++exit
+
+# 2026-10-18 20:09:40.498136
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('%fr1ll%'
+
+# 2026-10-18 20:09:43.066568
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('%fr1ll%')
+
+# 2026-10-18 20:09:49.034650
++\f GetUser fr1ll
+
+# 2026-10-18 20:10:01.030611
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('sunnyfr1ll')
+
+# 2026-10-18 20:10:09.586793
++select count(*) from stream_message where twitch_user_id = `GetUserIdFromLogin`('sunnyfr1ll')
+
+# 2026-10-18 21:24:36.663440
++\f GetUser Hazzy
+
+# 2026-10-18 21:24:48.313986
++select * from user_timeout where twitch_user_id = 27421
+
+# 2026-10-18 21:38:31.072643
++select * from stream
+
+# 2026-10-18 21:39:43.179832
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('DR_Animegaming') and stream_id = 1278 and contents like 20
+
+# 2026-10-18 21:39:45.939896
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('DR_Animegaming') and stream_id = 1278 and contents like "%20%"
+
+# 2026-10-18 23:05:54.991081
++select * from stream_message where twitch_user_id = `GetUserIdFromLogin`('linkthedot') and stream_id = 1278 and contents like "%10%000%"
+
+# 2026-10-19 01:53:46.815101
++exit
+
+# 2026-10-20 03:14:42.962812
++show columns from twitch_user 
+
+# 2026-10-20 03:14:46.786434
++show columns from donation_event 
+
+# 2026-10-20 03:19:10.215846
++SET SESSION group_concat_max_len = 1000000;
++
++SELECT GROUP_CONCAT(
++    DISTINCT CONCAT('SUM(CASE WHEN month = ''', month, ''' THEN usd ELSE 0 END) AS `', month, '`')
++    ORDER BY month
++) INTO @cols
++FROM top_donor_monthly;
++
++SET @sql := CONCAT(
++    'SELECT display_name, ', @cols, ', MAX(total_usd) AS total_usd ',
++    'FROM top_donor_monthly GROUP BY user_id, display_name ORDER BY total_usd DESC'
++);
++
++PREPARE stmt FROM @sql;
++EXECUTE stmt;
++DEALLOCATE PREPARE stmt;
+
+# 2026-10-20 03:19:27.135774
++SET @gbp_usd := 1.3381;
++
++DROP TEMPORARY TABLE IF EXISTS top_donor_monthly;
++
++CREATE TEMPORARY TABLE top_donor_monthly
++WITH usd AS (
++    SELECT
++        e.donator_twitch_user_id AS user_id,
++        DATE_FORMAT(e.`timestamp`, '%Y-%m') AS month,
++        CASE e.event_type
++            WHEN 'bits' THEN e.amount * 0.01
++            WHEN 'streamlabs_donation' THEN e.amount * @gbp_usd
++            WHEN 'gift_subs' THEN e.amount * CASE
++                WHEN e.subscription_tier IN (1, 1000) THEN 6
++                WHEN e.subscription_tier IN (2, 2000) THEN 10
++                WHEN e.subscription_tier IN (3, 3000) THEN 25
++            END
++        END AS usd
++    FROM donation_event e
++    WHERE e.donation_receiver_twitch_user_id = 1
++      AND e.donator_twitch_user_id IS NOT NULL
++),
++top30 AS (
++    SELECT user_id, SUM(usd) AS total_usd
++    FROM usd
++    GROUP BY user_id
++    ORDER BY total_usd DESC
++    LIMIT 30
++)
++SELECT
++    u.id AS user_id,
++    u.display_name,
++    d.month,
++    ROUND(SUM(d.usd), 2) AS usd,
++    ROUND(t.total_usd, 2) AS total_usd
++FROM usd d
++JOIN top30 t ON t.user_id = d.user_id
++JOIN twitch_user u ON u.id = d.user_id
++GROUP BY u.id, u.display_name, d.month, t.total_usd;
++
++SELECT display_name, month, usd FROM top_donor_monthly ORDER BY total_usd DESC, month;
+
+# 2026-10-20 03:20:13.871987
++SET SESSION group_concat_max_len = 1000000;
++
++SELECT GROUP_CONCAT(
++    DISTINCT CONCAT('SUM(CASE WHEN month = ''', month, ''' THEN usd ELSE 0 END) AS `', month, '`')
++    ORDER BY month
++) INTO @cols
++FROM top_donor_monthly;
++
++SET @sql := CONCAT(
++    'SELECT display_name, ', @cols, ', MAX(total_usd) AS total_usd ',
++    'FROM top_donor_monthly GROUP BY user_id, display_name ORDER BY total_usd DESC'
++);
++
++PREPARE stmt FROM @sql;
++EXECUTE stmt;
++DEALLOCATE PREPARE stmt;
+
+# 2026-10-20 03:20:18.898056
++exit
+
+# 2026-10-20 03:20:27.583112
++tee data.txt
+
+# 2026-10-20 03:20:30.184901
++SET SESSION group_concat_max_len = 1000000;
++
++SELECT GROUP_CONCAT(
++    DISTINCT CONCAT('SUM(CASE WHEN month = ''', month, ''' THEN usd ELSE 0 END) AS `', month, '`')
++    ORDER BY month
++) INTO @cols
++FROM top_donor_monthly;
++
++SET @sql := CONCAT(
++    'SELECT display_name, ', @cols, ', MAX(total_usd) AS total_usd ',
++    'FROM top_donor_monthly GROUP BY user_id, display_name ORDER BY total_usd DESC'
++);
++
++PREPARE stmt FROM @sql;
++EXECUTE stmt;
++DEALLOCATE PREPARE stmt;
+
+# 2026-10-20 03:20:36.811722
++SET @gbp_usd := 1.3381;
++
++DROP TEMPORARY TABLE IF EXISTS top_donor_monthly;
++
++CREATE TEMPORARY TABLE top_donor_monthly
++WITH usd AS (
++    SELECT
++        e.donator_twitch_user_id AS user_id,
++        DATE_FORMAT(e.`timestamp`, '%Y-%m') AS month,
++        CASE e.event_type
++            WHEN 'bits' THEN e.amount * 0.01
++            WHEN 'streamlabs_donation' THEN e.amount * @gbp_usd
++            WHEN 'gift_subs' THEN e.amount * CASE
++                WHEN e.subscription_tier IN (1, 1000) THEN 6
++                WHEN e.subscription_tier IN (2, 2000) THEN 10
++                WHEN e.subscription_tier IN (3, 3000) THEN 25
++            END
++        END AS usd
++    FROM donation_event e
++    WHERE e.donation_receiver_twitch_user_id = 1
++      AND e.donator_twitch_user_id IS NOT NULL
++),
++top30 AS (
++    SELECT user_id, SUM(usd) AS total_usd
++    FROM usd
++    GROUP BY user_id
++    ORDER BY total_usd DESC
++    LIMIT 30
++)
++SELECT
++    u.id AS user_id,
++    u.display_name,
++    d.month,
++    ROUND(SUM(d.usd), 2) AS usd,
++    ROUND(t.total_usd, 2) AS total_usd
++FROM usd d
++JOIN top30 t ON t.user_id = d.user_id
++JOIN twitch_user u ON u.id = d.user_id
++GROUP BY u.id, u.display_name, d.month, t.total_usd;
++
++SELECT display_name, month, usd FROM top_donor_monthly ORDER BY total_usd DESC, month;
+
+# 2026-10-20 03:20:42.426859
++notee
+
+# 2026-10-20 03:20:51.369954
++tee table.txt
+
+# 2026-10-20 03:20:56.511981
++SET SESSION group_concat_max_len = 1000000;
++
++SELECT GROUP_CONCAT(
++    DISTINCT CONCAT('SUM(CASE WHEN month = ''', month, ''' THEN usd ELSE 0 END) AS `', month, '`')
++    ORDER BY month
++) INTO @cols
++FROM top_donor_monthly;
++
++SET @sql := CONCAT(
++    'SELECT display_name, ', @cols, ', MAX(total_usd) AS total_usd ',
++    'FROM top_donor_monthly GROUP BY user_id, display_name ORDER BY total_usd DESC'
++);
++
++PREPARE stmt FROM @sql;
++EXECUTE stmt;
++DEALLOCATE PREPARE stmt;
+
+# 2026-10-20 03:20:58.719010
++notee
+
+# 2026-10-20 03:20:59.535574
++exit
+
+# 2026-10-20 03:24:52.718730
++\f GetUser tele_crab
+
+# 2026-10-20 03:24:58.831182
++select * from donation_event where donator_twitch_user_id = 1145
+
+# 2026-10-20 03:25:26.865350
++SET @gbp_usd := 1.3381;
++
++DROP TEMPORARY TABLE IF EXISTS top_donor_monthly;
++
++CREATE TEMPORARY TABLE top_donor_monthly
++WITH usd AS (
++    SELECT
++        e.donator_twitch_user_id AS user_id,
++        DATE_FORMAT(e.`timestamp`, '%Y-%m') AS month,
++        CASE e.event_type
++            WHEN 'bits' THEN e.amount * 0.01
++            WHEN 'streamlabs_donation' THEN e.amount * @gbp_usd
++            WHEN 'gift_subs' THEN e.amount * CASE
++                WHEN e.subscription_tier IN (1, 1000) THEN 6
++                WHEN e.subscription_tier IN (2, 2000) THEN 10
++                WHEN e.subscription_tier IN (3, 3000) THEN 25
++            END
++        END AS usd
++    FROM donation_event e
++    WHERE e.donation_receiver_twitch_user_id = 1
++      AND e.donator_twitch_user_id IS NOT NULL
++      AND e.`timestamp` >= '2026-01-01'
++      AND e.`timestamp` < '2027-01-01'
++),
++top30 AS (
++    SELECT user_id, SUM(usd) AS total_usd
++    FROM usd
++    GROUP BY user_id
++    ORDER BY total_usd DESC
++    LIMIT 30
++)
++SELECT
++    u.id AS user_id,
++    u.display_name,
++    d.month,
++    ROUND(SUM(d.usd), 2) AS usd,
++    ROUND(t.total_usd, 2) AS total_usd
++FROM usd d
++JOIN top30 t ON t.user_id = d.user_id
++JOIN twitch_user u ON u.id = d.user_id
++GROUP BY u.id, u.display_name, d.month, t.total_usd;
++
++SELECT display_name, month, usd FROM top_donor_monthly ORDER BY total_usd DESC, month;
+
+# 2026-10-20 03:25:33.575151
++tee table.txt
+
+# 2026-10-20 03:25:34.414081
++SET SESSION group_concat_max_len = 1000000;
++
++SELECT GROUP_CONCAT(
++    DISTINCT CONCAT('SUM(CASE WHEN month = ''', month, ''' THEN usd ELSE 0 END) AS `', month, '`')
++    ORDER BY month
++) INTO @cols
++FROM top_donor_monthly;
++
++SET @sql := CONCAT(
++    'SELECT display_name, ', @cols, ', MAX(total_usd) AS total_usd ',
++    'FROM top_donor_monthly GROUP BY user_id, display_name ORDER BY total_usd DESC'
++);
++
++PREPARE stmt FROM @sql;
++EXECUTE stmt;
++DEALLOCATE PREPARE stmt;
+
+# 2026-10-20 03:25:39.657124
++notee
+
+# 2026-10-20 03:26:44.196255
++select * from donation_event where donator_twitch_user_id = `GetUserIdFromLogin`("3_stann")
+
+# 2026-10-20 03:26:49.044190
++select * from donation_event where donator_twitch_user_id = `GetUserIdFromLogin`("3_stan_")
+
+# 2026-10-20 03:27:01.996115
++select * from donation_event where donator_twitch_user_id = `GetUserIdFromLogin`("3_stan_") and channel_id = 1
+
+# 2026-10-20 03:27:10.483350
++select * from donation_event where donator_twitch_user_id = `GetUserIdFromLogin`("3_stan_") and donation_receiver_twitch_user_id = 1
+
+# 2026-10-20 03:28:34.037178
++select * from donation_event where donator_twitch_user_id = 3
+
+# 2026-10-20 03:43:06.309093
++exit
+
+# 2026-10-20 14:17:21.670320
++SET SESSION group_concat_max_len = 1000000;
++
++SELECT GROUP_CONCAT(
++    DISTINCT CONCAT('SUM(CASE WHEN month = ''', month, ''' THEN usd ELSE 0 END) AS `', month, '`')
++    ORDER BY month
++) INTO @cols
++FROM top_donor_monthly;
++
++SET @sql := CONCAT(
++    'SELECT display_name, ', @cols, ', MAX(total_usd) AS total_usd ',
++    'FROM top_donor_monthly GROUP BY user_id, display_name ORDER BY total_usd DESC'
++);
++
++PREPARE stmt FROM @sql;
++EXECUTE stmt;
++DEALLOCATE PREPARE stmt;
+
+# 2026-10-20 14:17:39.053114
++SET @gbp_usd := 1.3381;
++
++DROP TEMPORARY TABLE IF EXISTS top_donor_monthly;
++
++CREATE TEMPORARY TABLE top_donor_monthly
++WITH usd AS (
++    SELECT
++        e.donator_twitch_user_id AS user_id,
++        DATE_FORMAT(e.`timestamp`, '%Y-%m') AS month,
++        CASE e.event_type
++            WHEN 'bits' THEN e.amount * 0.01
++            WHEN 'streamlabs_donation' THEN e.amount * @gbp_usd
++            WHEN 'gift_subs' THEN e.amount * CASE
++                WHEN e.subscription_tier IN (1, 1000) THEN 6
++                WHEN e.subscription_tier IN (2, 2000) THEN 10
++                WHEN e.subscription_tier IN (3, 3000) THEN 25
++            END
++        END AS usd
++    FROM donation_event e
++    WHERE e.donation_receiver_twitch_user_id = 6969
++      AND e.donator_twitch_user_id IS NOT NULL
++      AND e.`timestamp` >= '2026-01-01'
++      AND e.`timestamp` < '2027-01-01'
++),
++top30 AS (
++    SELECT user_id, SUM(usd) AS total_usd
++    FROM usd
++    GROUP BY user_id
++    ORDER BY total_usd DESC
++    LIMIT 30
++)
++SELECT
++    u.id AS user_id,
++    u.display_name,
++    d.month,
++    ROUND(SUM(d.usd), 2) AS usd,
++    ROUND(t.total_usd, 2) AS total_usd
++FROM usd d
++JOIN top30 t ON t.user_id = d.user_id
++JOIN twitch_user u ON u.id = d.user_id
++GROUP BY u.id, u.display_name, d.month, t.total_usd;
++
++SELECT display_name, month, usd FROM top_donor_monthly ORDER BY total_usd DESC, month;
+
+# 2026-10-20 14:17:45.122118
++SET SESSION group_concat_max_len = 1000000;
++
++SELECT GROUP_CONCAT(
++    DISTINCT CONCAT('SUM(CASE WHEN month = ''', month, ''' THEN usd ELSE 0 END) AS `', month, '`')
++    ORDER BY month
++) INTO @cols
++FROM top_donor_monthly;
++
++SET @sql := CONCAT(
++    'SELECT display_name, ', @cols, ', MAX(total_usd) AS total_usd ',
++    'FROM top_donor_monthly GROUP BY user_id, display_name ORDER BY total_usd DESC'
++);
++
++PREPARE stmt FROM @sql;
++EXECUTE stmt;
++DEALLOCATE PREPARE stmt;
+
+# 2026-10-20 17:38:53.458101
++exit
+
+# 2026-10-24 22:38:13.354096
++\f GetUser streamnelements
+
+# 2026-10-24 22:38:23.733671
++\f GetUser streamn\s
+
+# 2026-10-24 22:38:25.875667
++\f GetUser streamn
+
+# 2026-10-24 22:38:27.420639
++\f GetUser stream
+
+# 2026-10-24 22:38:32.468650
++\f GetUser streamelements
+
+# 2026-10-24 22:38:58.003677
++select * from stream_message where twitch_user_id = 5328 and contents like '%shadowmama%'
+
+# 2026-10-24 22:39:05.453022
++select * from stream_message where twitch_user_id = 5328 and contents like '%somnium%shadowmama%'
+
+# 2026-10-24 23:33:06.268814
++exit
+
+# 2026-10-24 23:36:08.713233
++\f GetUser sunny
+
+# 2026-10-24 23:36:23.161246
++select * from stream_message where twitch_user_id = 8621 and channel_id = 2
+
+# 2026-10-25 03:33:39.955991
++exit
